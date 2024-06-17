@@ -16,6 +16,8 @@ use html\a;
 echo a(href: 'https://example.com', target: '_blank', rel: 'noopener noreferrer'); // <a href="https://example.com" target="_blank" rel="noopener noreferrer"></a> 
 ```
 
+All functions return a string of the HTML element that it is named after. The only exception is the `var` function, which is named `variable` to avoid conflicts with the reserved keyword `var`.
+
 ## Elements
 
 | Tag | Attributes |

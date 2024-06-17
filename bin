@@ -143,6 +143,7 @@ class Bin
         fwrite($readme, "# Usage\n\n");
         $c = '// <a href="https://example.com" target="_blank" rel="noopener noreferrer"></a>';
         fwrite($readme, "```php\nuse html\\a;\n\necho a(href: 'https://example.com', target: '_blank', rel: 'noopener noreferrer'); {$c} \n```\n\n");
+        fwrite($readme, "All functions return a string of the HTML element that it is named after. The only exception is the `var` function, which is named `variable` to avoid conflicts with the reserved keyword `var`.\n\n");
         fwrite($readme, "## Elements\n\n");
         fwrite($readme, "| Tag | Attributes |\n");
         fwrite($readme, "| --- | ---------- |\n");
