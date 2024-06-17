@@ -1,0 +1,21 @@
+{
+  "name": "lnear/html",
+  "description": "Utility functions for rendering html",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "files": [
+      "src/index.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "lnear",
+      "email": "hi@lnear.dev"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require-dev": {
+    "symfony/console": "^7.1"
+  }
+}

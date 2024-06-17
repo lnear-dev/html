@@ -1,0 +1,171 @@
+#!/usr/bin/env php
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\SingleCommandApplication;
+
+const kSpec             = 'https://html.spec.whatwg.org/multipage/indices.html'; // Replace with the actual URL of the spec
+const kJSON             = __DIR__ . '/src/elements.json';
+const kPHP              = __DIR__ . '/src/elements.php';
+const kGlobalAttributes = [
+    'accesskey',
+    'autocapitalize',
+    'class',
+    'contenteditable',
+    'contextmenu',
+    'dir',
+    'draggable',
+    'dropzone',
+    'hidden',
+    'id',
+    'itemid',
+    'itemprop',
+    'itemref',
+    'itemscope',
+    'itemtype',
+    'lang',
+    'spellcheck',
+    'style',
+    'tabindex',
+    'title',
+    'translate',
+];
+class Bin
+{
+    static function update()
+    {
+        // URL of the HTML specification page
+
+        // Fetch the HTML content
+        $html = file_get_contents(kSpec);
+        if ($html === false) {
+            die("Failed to fetch HTML content.");
+        }
+
+        // Load the HTML into DOMDocument
+        $dom = new DOMDocument();
+        libxml_use_internal_errors(true); // Ignore HTML parsing errors
+        $dom->loadHTML($html);
+        libxml_clear_errors();
+
+        // XPath to query the elements
+        $xpath = new DOMXPath($dom);
+
+        // Define an array to hold the elements information
+        $elements = [];
+
+        // XPath query to select all rows in the elements table
+        $elements_query = $xpath->query('//table[caption[text()="List of elements"]]/tbody/tr');
+
+        foreach ($elements_query as $element) {
+            // Extract the tag name from the first column
+            $tag = $xpath->query('th/code/a', $element)->item(0)?->textContent;
+
+            // Extract the attributes from the sixth column
+            $attributes_node = $xpath->query('td[5]', $element)->item(0);
+            $attributes      = kGlobalAttributes;
+            if ($attributes_node) {
+                foreach ($xpath->query('code/a', $attributes_node) as $attr) {
+                    $attributes[] = $attr->textContent;
+                }
+            }
+
+            // Determine if the element is self-closing based on the children column
+            $children    = $xpath->query('td[4]', $element)->item(0)->textContent;
+            $selfClosing = strpos($children, 'empty') !== false;
+
+            // Add the element to the list
+            $elements[] = [
+                "tag"         => $tag,
+                "attributes"  => $attributes,
+                "selfClosing" => $selfClosing,
+            ];
+        }
+
+        // Write the elements to a JSON file
+        file_put_contents(kJSON, json_encode($elements, JSON_PRETTY_PRINT));
+        self::generate($elements);
+    }
+
+
+    static function camelArg(string $string)
+    {
+        return "\$" . lcfirst(str_replace(' ', '', ucwords(str_replace('-', ' ', $string))));
+    }
+    static function generateElementCode(
+        ?string $tag,
+        array $attributes,
+        bool $selfClosing,
+    ) {
+        if (!$tag) {
+            return '';
+        }
+        $fname = $tag;
+        //"var" is a reserved keyword in PHP 
+        if ($tag === 'var')
+            $fname = 'variable';
+        if (!$selfClosing)
+            $attributes[] = 'body';
+        $attributes_impl = join(".\n", array_map(fn($attr) => "(" . self::camelArg($attr) . " !== '' ? \" {$attr}='\" . htmlspecialchars(" . self::camelArg($attr) . ", ENT_QUOTES) . \"'\" : '')", $attributes));
+        $attributes      = join(",\n", array_map(fn($attr) => "string " . self::camelArg($attr) . '= ""', $attributes));
+        $attributes_impl = $attributes_impl ? $attributes_impl . '.' : '';
+        // return $selfClosing
+        //     ? "function {$fname}({$attributes}) { return \"<{$tag}\" . {$attributes_impl} \">\"; }"
+        //     : "function {$fname}({$attributes}) { return \"<{$tag}\" . {$attributes_impl}   \">{\$body}</{$tag}>\";} ";
+        return "function {$fname}({$attributes}) { return \"<{$tag}\" . {$attributes_impl} " . ($selfClosing ? '"/>"' : "\">{\$body}</{$tag}>\"") . "; }";
+    }
+    static function generate(array $elements)
+    {
+        //reset the file
+        file_put_contents(kPHP, '');
+        $file = fopen(kPHP, 'w');
+        if ($file === false)
+            die("Failed to open PHP file for writing.");
+        fwrite($file, "<?php\n\nnamespace html;\n\n");
+        foreach ($elements as ['tag' => $tag, 'attributes' => $attributes, 'selfClosing' => $selfClosing])
+            fwrite($file, self::generateElementCode($tag, $attributes, $selfClosing) . "\n\n");
+        fclose($file);
+        self::generateReadme($elements);
+    }
+    static function generateReadme(array $elements)
+    {
+        $readme = fopen(__DIR__ . '/README.md', 'w');
+        if ($readme === false)
+            die("Failed to open README file for writing.");
+        fwrite($readme, "# lnear/html, a PHP library for generating HTML elements\n\n");
+        fwrite($readme, "This is a list of HTML elements and their attributes generated from the [HTML Living Standard](https://html.spec.whatwg.org/multipage/indices.html).\n\n");
+        fwrite($readme, "# Installation\n\n");
+        fwrite($readme, "```bash\ncomposer require lnear/html\n```\n\n");
+        fwrite($readme, "# Usage\n\n");
+        $c = '// <a href="https://example.com" target="_blank" rel="noopener noreferrer"></a>';
+        fwrite($readme, "```php\nuse html\\a;\n\necho a(href: 'https://example.com', target: '_blank', rel: 'noopener noreferrer'); {$c} \n```\n\n");
+        fwrite($readme, "## Elements\n\n");
+        fwrite($readme, "| Tag | Attributes |\n");
+        fwrite($readme, "| --- | ---------- |\n");
+        foreach ($elements as ['tag' => $tag, 'attributes' => $attributes]) {
+            fwrite($readme, "| `{$tag}` | " . join(', ', $attributes) . " |\n");
+        }
+
+
+        fclose($readme);
+    }
+
+}
+(new SingleCommandApplication())
+    ->setName('Generate HTML Elements')
+    ->setVersion('1.0.0')
+    ->addOption('update', 'u', InputOption::VALUE_NONE, 'Update the elements list from the HTML specification')
+    ->setCode(function (InputInterface $input, OutputInterface $output): int {
+        if ($input->getOption('update')) {
+            Bin::update();
+            $output->writeln('Elements list updated.');
+        } else {
+            Bin::generate(json_decode(file_get_contents(kJSON), true));
+        }
+        return 0;
+    })
+    ->run();
