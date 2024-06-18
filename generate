@@ -94,16 +94,16 @@ class Bin
         if ($tag === 'var') {
             $fname = 'variable';
         }
-
+        $args = $attributes;
         if (!$selfClosing) {
-            array_unshift($attributes, 'body');
+            array_unshift($args, 'body');
         }
 
         $attributes_impl = join(
             ".\n",
             array_map(
                 function ($attr) use ($level) {
-                    $arg = "\$" . self::camelArg($attr);
+                    $arg = self::camelArg($attr);
                     return self::indent("({$arg} !== '' ? \" {$attr}='\" . htmlspecialchars({$arg}, ENT_QUOTES) . \"'\" : '')", $level);
                 },
                 $attributes,
@@ -116,7 +116,7 @@ class Bin
                 ",\n",
                 array_map(
                     fn($attr) => "string " . self::camelArg($attr) . '= ""',
-                    $attributes,
+                    $args,
                 ),
             ),
             $level,

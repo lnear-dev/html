@@ -36,7 +36,7 @@ function attr(string ...$attributes): string
             fn($match) => '-' . strtolower($match[0]),
             $key,
         );
-        $attrs .= " {$key}=\"{$value}\"";
+        $attrs .= " {$key}='{$value}'";
     }
 
     return $attrs;
@@ -69,5 +69,5 @@ function selfClosingElement(string $tag, string ...$attributes): string
 {
     $attrs = attr(...$attributes);
 
-    return "<{$tag}{$attrs} />";
+    return "<{$tag}{$attrs}/>";
 }

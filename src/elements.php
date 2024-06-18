@@ -51,36 +51,35 @@ function a(
     string $title= "",
     string $translate= ""
 ) {
-    return "<a" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$href !== '' ? " href='" . htmlspecialchars($$href, ENT_QUOTES) . "'" : '').
-        ($$target !== '' ? " target='" . htmlspecialchars($$target, ENT_QUOTES) . "'" : '').
-        ($$download !== '' ? " download='" . htmlspecialchars($$download, ENT_QUOTES) . "'" : '').
-        ($$ping !== '' ? " ping='" . htmlspecialchars($$ping, ENT_QUOTES) . "'" : '').
-        ($$rel !== '' ? " rel='" . htmlspecialchars($$rel, ENT_QUOTES) . "'" : '').
-        ($$hreflang !== '' ? " hreflang='" . htmlspecialchars($$hreflang, ENT_QUOTES) . "'" : '').
-        ($$type !== '' ? " type='" . htmlspecialchars($$type, ENT_QUOTES) . "'" : '').
-        ($$referrerpolicy !== '' ? " referrerpolicy='" . htmlspecialchars($$referrerpolicy, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</a>";
+    return "<a" .     ($href !== '' ? " href='" . htmlspecialchars($href, ENT_QUOTES) . "'" : '').
+        ($target !== '' ? " target='" . htmlspecialchars($target, ENT_QUOTES) . "'" : '').
+        ($download !== '' ? " download='" . htmlspecialchars($download, ENT_QUOTES) . "'" : '').
+        ($ping !== '' ? " ping='" . htmlspecialchars($ping, ENT_QUOTES) . "'" : '').
+        ($rel !== '' ? " rel='" . htmlspecialchars($rel, ENT_QUOTES) . "'" : '').
+        ($hreflang !== '' ? " hreflang='" . htmlspecialchars($hreflang, ENT_QUOTES) . "'" : '').
+        ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
+        ($referrerpolicy !== '' ? " referrerpolicy='" . htmlspecialchars($referrerpolicy, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</a>";
     
 }
 
@@ -108,28 +107,27 @@ function abbr(
     string $title= "",
     string $translate= ""
 ) {
-    return "<abbr" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</abbr>";
+    return "<abbr" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</abbr>";
     
 }
 
@@ -157,28 +155,27 @@ function address(
     string $title= "",
     string $translate= ""
 ) {
-    return "<address" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</address>";
+    return "<address" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</address>";
     
 }
 
@@ -214,36 +211,36 @@ function area(
     string $title= "",
     string $translate= ""
 ) {
-    return "<area" .     ($$alt !== '' ? " alt='" . htmlspecialchars($$alt, ENT_QUOTES) . "'" : '').
-        ($$coords !== '' ? " coords='" . htmlspecialchars($$coords, ENT_QUOTES) . "'" : '').
-        ($$shape !== '' ? " shape='" . htmlspecialchars($$shape, ENT_QUOTES) . "'" : '').
-        ($$href !== '' ? " href='" . htmlspecialchars($$href, ENT_QUOTES) . "'" : '').
-        ($$target !== '' ? " target='" . htmlspecialchars($$target, ENT_QUOTES) . "'" : '').
-        ($$download !== '' ? " download='" . htmlspecialchars($$download, ENT_QUOTES) . "'" : '').
-        ($$ping !== '' ? " ping='" . htmlspecialchars($$ping, ENT_QUOTES) . "'" : '').
-        ($$rel !== '' ? " rel='" . htmlspecialchars($$rel, ENT_QUOTES) . "'" : '').
-        ($$referrerpolicy !== '' ? " referrerpolicy='" . htmlspecialchars($$referrerpolicy, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<area" .     ($alt !== '' ? " alt='" . htmlspecialchars($alt, ENT_QUOTES) . "'" : '').
+        ($coords !== '' ? " coords='" . htmlspecialchars($coords, ENT_QUOTES) . "'" : '').
+        ($shape !== '' ? " shape='" . htmlspecialchars($shape, ENT_QUOTES) . "'" : '').
+        ($href !== '' ? " href='" . htmlspecialchars($href, ENT_QUOTES) . "'" : '').
+        ($target !== '' ? " target='" . htmlspecialchars($target, ENT_QUOTES) . "'" : '').
+        ($download !== '' ? " download='" . htmlspecialchars($download, ENT_QUOTES) . "'" : '').
+        ($ping !== '' ? " ping='" . htmlspecialchars($ping, ENT_QUOTES) . "'" : '').
+        ($rel !== '' ? " rel='" . htmlspecialchars($rel, ENT_QUOTES) . "'" : '').
+        ($referrerpolicy !== '' ? " referrerpolicy='" . htmlspecialchars($referrerpolicy, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -271,28 +268,27 @@ function article(
     string $title= "",
     string $translate= ""
 ) {
-    return "<article" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</article>";
+    return "<article" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</article>";
     
 }
 
@@ -320,28 +316,27 @@ function aside(
     string $title= "",
     string $translate= ""
 ) {
-    return "<aside" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</aside>";
+    return "<aside" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</aside>";
     
 }
 
@@ -376,35 +371,34 @@ function audio(
     string $title= "",
     string $translate= ""
 ) {
-    return "<audio" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$src !== '' ? " src='" . htmlspecialchars($$src, ENT_QUOTES) . "'" : '').
-        ($$crossorigin !== '' ? " crossorigin='" . htmlspecialchars($$crossorigin, ENT_QUOTES) . "'" : '').
-        ($$preload !== '' ? " preload='" . htmlspecialchars($$preload, ENT_QUOTES) . "'" : '').
-        ($$autoplay !== '' ? " autoplay='" . htmlspecialchars($$autoplay, ENT_QUOTES) . "'" : '').
-        ($$loop !== '' ? " loop='" . htmlspecialchars($$loop, ENT_QUOTES) . "'" : '').
-        ($$muted !== '' ? " muted='" . htmlspecialchars($$muted, ENT_QUOTES) . "'" : '').
-        ($$controls !== '' ? " controls='" . htmlspecialchars($$controls, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</audio>";
+    return "<audio" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+        ($crossorigin !== '' ? " crossorigin='" . htmlspecialchars($crossorigin, ENT_QUOTES) . "'" : '').
+        ($preload !== '' ? " preload='" . htmlspecialchars($preload, ENT_QUOTES) . "'" : '').
+        ($autoplay !== '' ? " autoplay='" . htmlspecialchars($autoplay, ENT_QUOTES) . "'" : '').
+        ($loop !== '' ? " loop='" . htmlspecialchars($loop, ENT_QUOTES) . "'" : '').
+        ($muted !== '' ? " muted='" . htmlspecialchars($muted, ENT_QUOTES) . "'" : '').
+        ($controls !== '' ? " controls='" . htmlspecialchars($controls, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</audio>";
     
 }
 
@@ -432,28 +426,27 @@ function b(
     string $title= "",
     string $translate= ""
 ) {
-    return "<b" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</b>";
+    return "<b" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</b>";
     
 }
 
@@ -482,29 +475,29 @@ function base(
     string $title= "",
     string $translate= ""
 ) {
-    return "<base" .     ($$href !== '' ? " href='" . htmlspecialchars($$href, ENT_QUOTES) . "'" : '').
-        ($$target !== '' ? " target='" . htmlspecialchars($$target, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<base" .     ($href !== '' ? " href='" . htmlspecialchars($href, ENT_QUOTES) . "'" : '').
+        ($target !== '' ? " target='" . htmlspecialchars($target, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -532,28 +525,27 @@ function bdi(
     string $title= "",
     string $translate= ""
 ) {
-    return "<bdi" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</bdi>";
+    return "<bdi" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</bdi>";
     
 }
 
@@ -581,28 +573,27 @@ function bdo(
     string $title= "",
     string $translate= ""
 ) {
-    return "<bdo" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</bdo>";
+    return "<bdo" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</bdo>";
     
 }
 
@@ -631,29 +622,28 @@ function blockquote(
     string $title= "",
     string $translate= ""
 ) {
-    return "<blockquote" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$cite !== '' ? " cite='" . htmlspecialchars($$cite, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</blockquote>";
+    return "<blockquote" .     ($cite !== '' ? " cite='" . htmlspecialchars($cite, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</blockquote>";
     
 }
 
@@ -699,46 +689,45 @@ function body(
     string $title= "",
     string $translate= ""
 ) {
-    return "<body" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$onafterprint !== '' ? " onafterprint='" . htmlspecialchars($$onafterprint, ENT_QUOTES) . "'" : '').
-        ($$onbeforeprint !== '' ? " onbeforeprint='" . htmlspecialchars($$onbeforeprint, ENT_QUOTES) . "'" : '').
-        ($$onbeforeunload !== '' ? " onbeforeunload='" . htmlspecialchars($$onbeforeunload, ENT_QUOTES) . "'" : '').
-        ($$onhashchange !== '' ? " onhashchange='" . htmlspecialchars($$onhashchange, ENT_QUOTES) . "'" : '').
-        ($$onlanguagechange !== '' ? " onlanguagechange='" . htmlspecialchars($$onlanguagechange, ENT_QUOTES) . "'" : '').
-        ($$onmessage !== '' ? " onmessage='" . htmlspecialchars($$onmessage, ENT_QUOTES) . "'" : '').
-        ($$onmessageerror !== '' ? " onmessageerror='" . htmlspecialchars($$onmessageerror, ENT_QUOTES) . "'" : '').
-        ($$onoffline !== '' ? " onoffline='" . htmlspecialchars($$onoffline, ENT_QUOTES) . "'" : '').
-        ($$ononline !== '' ? " ononline='" . htmlspecialchars($$ononline, ENT_QUOTES) . "'" : '').
-        ($$onpageswap !== '' ? " onpageswap='" . htmlspecialchars($$onpageswap, ENT_QUOTES) . "'" : '').
-        ($$onpagehide !== '' ? " onpagehide='" . htmlspecialchars($$onpagehide, ENT_QUOTES) . "'" : '').
-        ($$onpagereveal !== '' ? " onpagereveal='" . htmlspecialchars($$onpagereveal, ENT_QUOTES) . "'" : '').
-        ($$onpageshow !== '' ? " onpageshow='" . htmlspecialchars($$onpageshow, ENT_QUOTES) . "'" : '').
-        ($$onpopstate !== '' ? " onpopstate='" . htmlspecialchars($$onpopstate, ENT_QUOTES) . "'" : '').
-        ($$onrejectionhandled !== '' ? " onrejectionhandled='" . htmlspecialchars($$onrejectionhandled, ENT_QUOTES) . "'" : '').
-        ($$onstorage !== '' ? " onstorage='" . htmlspecialchars($$onstorage, ENT_QUOTES) . "'" : '').
-        ($$onunhandledrejection !== '' ? " onunhandledrejection='" . htmlspecialchars($$onunhandledrejection, ENT_QUOTES) . "'" : '').
-        ($$onunload !== '' ? " onunload='" . htmlspecialchars($$onunload, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</body>";
+    return "<body" .     ($onafterprint !== '' ? " onafterprint='" . htmlspecialchars($onafterprint, ENT_QUOTES) . "'" : '').
+        ($onbeforeprint !== '' ? " onbeforeprint='" . htmlspecialchars($onbeforeprint, ENT_QUOTES) . "'" : '').
+        ($onbeforeunload !== '' ? " onbeforeunload='" . htmlspecialchars($onbeforeunload, ENT_QUOTES) . "'" : '').
+        ($onhashchange !== '' ? " onhashchange='" . htmlspecialchars($onhashchange, ENT_QUOTES) . "'" : '').
+        ($onlanguagechange !== '' ? " onlanguagechange='" . htmlspecialchars($onlanguagechange, ENT_QUOTES) . "'" : '').
+        ($onmessage !== '' ? " onmessage='" . htmlspecialchars($onmessage, ENT_QUOTES) . "'" : '').
+        ($onmessageerror !== '' ? " onmessageerror='" . htmlspecialchars($onmessageerror, ENT_QUOTES) . "'" : '').
+        ($onoffline !== '' ? " onoffline='" . htmlspecialchars($onoffline, ENT_QUOTES) . "'" : '').
+        ($ononline !== '' ? " ononline='" . htmlspecialchars($ononline, ENT_QUOTES) . "'" : '').
+        ($onpageswap !== '' ? " onpageswap='" . htmlspecialchars($onpageswap, ENT_QUOTES) . "'" : '').
+        ($onpagehide !== '' ? " onpagehide='" . htmlspecialchars($onpagehide, ENT_QUOTES) . "'" : '').
+        ($onpagereveal !== '' ? " onpagereveal='" . htmlspecialchars($onpagereveal, ENT_QUOTES) . "'" : '').
+        ($onpageshow !== '' ? " onpageshow='" . htmlspecialchars($onpageshow, ENT_QUOTES) . "'" : '').
+        ($onpopstate !== '' ? " onpopstate='" . htmlspecialchars($onpopstate, ENT_QUOTES) . "'" : '').
+        ($onrejectionhandled !== '' ? " onrejectionhandled='" . htmlspecialchars($onrejectionhandled, ENT_QUOTES) . "'" : '').
+        ($onstorage !== '' ? " onstorage='" . htmlspecialchars($onstorage, ENT_QUOTES) . "'" : '').
+        ($onunhandledrejection !== '' ? " onunhandledrejection='" . htmlspecialchars($onunhandledrejection, ENT_QUOTES) . "'" : '').
+        ($onunload !== '' ? " onunload='" . htmlspecialchars($onunload, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</body>";
     
 }
 
@@ -765,27 +754,27 @@ function br(
     string $title= "",
     string $translate= ""
 ) {
-    return "<br" .     ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<br" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -825,40 +814,39 @@ function button(
     string $title= "",
     string $translate= ""
 ) {
-    return "<button" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$disabled !== '' ? " disabled='" . htmlspecialchars($$disabled, ENT_QUOTES) . "'" : '').
-        ($$form !== '' ? " form='" . htmlspecialchars($$form, ENT_QUOTES) . "'" : '').
-        ($$formaction !== '' ? " formaction='" . htmlspecialchars($$formaction, ENT_QUOTES) . "'" : '').
-        ($$formenctype !== '' ? " formenctype='" . htmlspecialchars($$formenctype, ENT_QUOTES) . "'" : '').
-        ($$formmethod !== '' ? " formmethod='" . htmlspecialchars($$formmethod, ENT_QUOTES) . "'" : '').
-        ($$formnovalidate !== '' ? " formnovalidate='" . htmlspecialchars($$formnovalidate, ENT_QUOTES) . "'" : '').
-        ($$formtarget !== '' ? " formtarget='" . htmlspecialchars($$formtarget, ENT_QUOTES) . "'" : '').
-        ($$name !== '' ? " name='" . htmlspecialchars($$name, ENT_QUOTES) . "'" : '').
-        ($$popovertarget !== '' ? " popovertarget='" . htmlspecialchars($$popovertarget, ENT_QUOTES) . "'" : '').
-        ($$popovertargetaction !== '' ? " popovertargetaction='" . htmlspecialchars($$popovertargetaction, ENT_QUOTES) . "'" : '').
-        ($$type !== '' ? " type='" . htmlspecialchars($$type, ENT_QUOTES) . "'" : '').
-        ($$value !== '' ? " value='" . htmlspecialchars($$value, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</button>";
+    return "<button" .     ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
+        ($form !== '' ? " form='" . htmlspecialchars($form, ENT_QUOTES) . "'" : '').
+        ($formaction !== '' ? " formaction='" . htmlspecialchars($formaction, ENT_QUOTES) . "'" : '').
+        ($formenctype !== '' ? " formenctype='" . htmlspecialchars($formenctype, ENT_QUOTES) . "'" : '').
+        ($formmethod !== '' ? " formmethod='" . htmlspecialchars($formmethod, ENT_QUOTES) . "'" : '').
+        ($formnovalidate !== '' ? " formnovalidate='" . htmlspecialchars($formnovalidate, ENT_QUOTES) . "'" : '').
+        ($formtarget !== '' ? " formtarget='" . htmlspecialchars($formtarget, ENT_QUOTES) . "'" : '').
+        ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+        ($popovertarget !== '' ? " popovertarget='" . htmlspecialchars($popovertarget, ENT_QUOTES) . "'" : '').
+        ($popovertargetaction !== '' ? " popovertargetaction='" . htmlspecialchars($popovertargetaction, ENT_QUOTES) . "'" : '').
+        ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
+        ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</button>";
     
 }
 
@@ -888,30 +876,29 @@ function canvas(
     string $title= "",
     string $translate= ""
 ) {
-    return "<canvas" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$width !== '' ? " width='" . htmlspecialchars($$width, ENT_QUOTES) . "'" : '').
-        ($$height !== '' ? " height='" . htmlspecialchars($$height, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</canvas>";
+    return "<canvas" .     ($width !== '' ? " width='" . htmlspecialchars($width, ENT_QUOTES) . "'" : '').
+        ($height !== '' ? " height='" . htmlspecialchars($height, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</canvas>";
     
 }
 
@@ -939,28 +926,27 @@ function caption(
     string $title= "",
     string $translate= ""
 ) {
-    return "<caption" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</caption>";
+    return "<caption" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</caption>";
     
 }
 
@@ -988,28 +974,27 @@ function cite(
     string $title= "",
     string $translate= ""
 ) {
-    return "<cite" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</cite>";
+    return "<cite" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</cite>";
     
 }
 
@@ -1037,28 +1022,27 @@ function code(
     string $title= "",
     string $translate= ""
 ) {
-    return "<code" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</code>";
+    return "<code" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</code>";
     
 }
 
@@ -1086,28 +1070,28 @@ function col(
     string $title= "",
     string $translate= ""
 ) {
-    return "<col" .     ($$span !== '' ? " span='" . htmlspecialchars($$span, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<col" .     ($span !== '' ? " span='" . htmlspecialchars($span, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -1136,29 +1120,28 @@ function colgroup(
     string $title= "",
     string $translate= ""
 ) {
-    return "<colgroup" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$span !== '' ? " span='" . htmlspecialchars($$span, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</colgroup>";
+    return "<colgroup" .     ($span !== '' ? " span='" . htmlspecialchars($span, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</colgroup>";
     
 }
 
@@ -1187,29 +1170,28 @@ function data(
     string $title= "",
     string $translate= ""
 ) {
-    return "<data" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$value !== '' ? " value='" . htmlspecialchars($$value, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</data>";
+    return "<data" .     ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</data>";
     
 }
 
@@ -1237,28 +1219,27 @@ function datalist(
     string $title= "",
     string $translate= ""
 ) {
-    return "<datalist" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</datalist>";
+    return "<datalist" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</datalist>";
     
 }
 
@@ -1286,28 +1267,27 @@ function dd(
     string $title= "",
     string $translate= ""
 ) {
-    return "<dd" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</dd>";
+    return "<dd" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dd>";
     
 }
 
@@ -1337,30 +1317,29 @@ function del(
     string $title= "",
     string $translate= ""
 ) {
-    return "<del" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$cite !== '' ? " cite='" . htmlspecialchars($$cite, ENT_QUOTES) . "'" : '').
-        ($$datetime !== '' ? " datetime='" . htmlspecialchars($$datetime, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</del>";
+    return "<del" .     ($cite !== '' ? " cite='" . htmlspecialchars($cite, ENT_QUOTES) . "'" : '').
+        ($datetime !== '' ? " datetime='" . htmlspecialchars($datetime, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</del>";
     
 }
 
@@ -1390,30 +1369,29 @@ function details(
     string $title= "",
     string $translate= ""
 ) {
-    return "<details" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$name !== '' ? " name='" . htmlspecialchars($$name, ENT_QUOTES) . "'" : '').
-        ($$open !== '' ? " open='" . htmlspecialchars($$open, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</details>";
+    return "<details" .     ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+        ($open !== '' ? " open='" . htmlspecialchars($open, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</details>";
     
 }
 
@@ -1441,28 +1419,27 @@ function dfn(
     string $title= "",
     string $translate= ""
 ) {
-    return "<dfn" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</dfn>";
+    return "<dfn" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dfn>";
     
 }
 
@@ -1491,29 +1468,28 @@ function dialog(
     string $title= "",
     string $translate= ""
 ) {
-    return "<dialog" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$open !== '' ? " open='" . htmlspecialchars($$open, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</dialog>";
+    return "<dialog" .     ($open !== '' ? " open='" . htmlspecialchars($open, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dialog>";
     
 }
 
@@ -1541,28 +1517,27 @@ function div(
     string $title= "",
     string $translate= ""
 ) {
-    return "<div" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</div>";
+    return "<div" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</div>";
     
 }
 
@@ -1590,28 +1565,27 @@ function dl(
     string $title= "",
     string $translate= ""
 ) {
-    return "<dl" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</dl>";
+    return "<dl" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dl>";
     
 }
 
@@ -1639,28 +1613,27 @@ function dt(
     string $title= "",
     string $translate= ""
 ) {
-    return "<dt" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</dt>";
+    return "<dt" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dt>";
     
 }
 
@@ -1688,28 +1661,27 @@ function em(
     string $title= "",
     string $translate= ""
 ) {
-    return "<em" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</em>";
+    return "<em" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</em>";
     
 }
 
@@ -1740,31 +1712,31 @@ function embed(
     string $title= "",
     string $translate= ""
 ) {
-    return "<embed" .     ($$src !== '' ? " src='" . htmlspecialchars($$src, ENT_QUOTES) . "'" : '').
-        ($$type !== '' ? " type='" . htmlspecialchars($$type, ENT_QUOTES) . "'" : '').
-        ($$width !== '' ? " width='" . htmlspecialchars($$width, ENT_QUOTES) . "'" : '').
-        ($$height !== '' ? " height='" . htmlspecialchars($$height, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<embed" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+        ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
+        ($width !== '' ? " width='" . htmlspecialchars($width, ENT_QUOTES) . "'" : '').
+        ($height !== '' ? " height='" . htmlspecialchars($height, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -1795,31 +1767,30 @@ function fieldset(
     string $title= "",
     string $translate= ""
 ) {
-    return "<fieldset" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$disabled !== '' ? " disabled='" . htmlspecialchars($$disabled, ENT_QUOTES) . "'" : '').
-        ($$form !== '' ? " form='" . htmlspecialchars($$form, ENT_QUOTES) . "'" : '').
-        ($$name !== '' ? " name='" . htmlspecialchars($$name, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</fieldset>";
+    return "<fieldset" .     ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
+        ($form !== '' ? " form='" . htmlspecialchars($form, ENT_QUOTES) . "'" : '').
+        ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</fieldset>";
     
 }
 
@@ -1847,28 +1818,27 @@ function figcaption(
     string $title= "",
     string $translate= ""
 ) {
-    return "<figcaption" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</figcaption>";
+    return "<figcaption" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</figcaption>";
     
 }
 
@@ -1896,28 +1866,27 @@ function figure(
     string $title= "",
     string $translate= ""
 ) {
-    return "<figure" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</figure>";
+    return "<figure" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</figure>";
     
 }
 
@@ -1945,28 +1914,27 @@ function footer(
     string $title= "",
     string $translate= ""
 ) {
-    return "<footer" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</footer>";
+    return "<footer" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</footer>";
     
 }
 
@@ -2003,37 +1971,36 @@ function form(
     string $title= "",
     string $translate= ""
 ) {
-    return "<form" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$acceptCharset !== '' ? " accept-charset='" . htmlspecialchars($$acceptCharset, ENT_QUOTES) . "'" : '').
-        ($$action !== '' ? " action='" . htmlspecialchars($$action, ENT_QUOTES) . "'" : '').
-        ($$autocomplete !== '' ? " autocomplete='" . htmlspecialchars($$autocomplete, ENT_QUOTES) . "'" : '').
-        ($$enctype !== '' ? " enctype='" . htmlspecialchars($$enctype, ENT_QUOTES) . "'" : '').
-        ($$method !== '' ? " method='" . htmlspecialchars($$method, ENT_QUOTES) . "'" : '').
-        ($$name !== '' ? " name='" . htmlspecialchars($$name, ENT_QUOTES) . "'" : '').
-        ($$novalidate !== '' ? " novalidate='" . htmlspecialchars($$novalidate, ENT_QUOTES) . "'" : '').
-        ($$rel !== '' ? " rel='" . htmlspecialchars($$rel, ENT_QUOTES) . "'" : '').
-        ($$target !== '' ? " target='" . htmlspecialchars($$target, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</form>";
+    return "<form" .     ($acceptCharset !== '' ? " accept-charset='" . htmlspecialchars($acceptCharset, ENT_QUOTES) . "'" : '').
+        ($action !== '' ? " action='" . htmlspecialchars($action, ENT_QUOTES) . "'" : '').
+        ($autocomplete !== '' ? " autocomplete='" . htmlspecialchars($autocomplete, ENT_QUOTES) . "'" : '').
+        ($enctype !== '' ? " enctype='" . htmlspecialchars($enctype, ENT_QUOTES) . "'" : '').
+        ($method !== '' ? " method='" . htmlspecialchars($method, ENT_QUOTES) . "'" : '').
+        ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+        ($novalidate !== '' ? " novalidate='" . htmlspecialchars($novalidate, ENT_QUOTES) . "'" : '').
+        ($rel !== '' ? " rel='" . htmlspecialchars($rel, ENT_QUOTES) . "'" : '').
+        ($target !== '' ? " target='" . htmlspecialchars($target, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</form>";
     
 }
 
@@ -2061,28 +2028,27 @@ function h1(
     string $title= "",
     string $translate= ""
 ) {
-    return "<h1" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</h1>";
+    return "<h1" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</h1>";
     
 }
 
@@ -2110,28 +2076,27 @@ function head(
     string $title= "",
     string $translate= ""
 ) {
-    return "<head" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</head>";
+    return "<head" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</head>";
     
 }
 
@@ -2159,28 +2124,27 @@ function header(
     string $title= "",
     string $translate= ""
 ) {
-    return "<header" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</header>";
+    return "<header" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</header>";
     
 }
 
@@ -2208,28 +2172,27 @@ function hgroup(
     string $title= "",
     string $translate= ""
 ) {
-    return "<hgroup" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</hgroup>";
+    return "<hgroup" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</hgroup>";
     
 }
 
@@ -2256,27 +2219,27 @@ function hr(
     string $title= "",
     string $translate= ""
 ) {
-    return "<hr" .     ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<hr" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -2305,29 +2268,28 @@ function html(
     string $title= "",
     string $translate= ""
 ) {
-    return "<html" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$manifest !== '' ? " manifest='" . htmlspecialchars($$manifest, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</html>";
+    return "<html" .     ($manifest !== '' ? " manifest='" . htmlspecialchars($manifest, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</html>";
     
 }
 
@@ -2355,28 +2317,27 @@ function i(
     string $title= "",
     string $translate= ""
 ) {
-    return "<i" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</i>";
+    return "<i" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</i>";
     
 }
 
@@ -2413,37 +2374,37 @@ function iframe(
     string $title= "",
     string $translate= ""
 ) {
-    return "<iframe" .     ($$src !== '' ? " src='" . htmlspecialchars($$src, ENT_QUOTES) . "'" : '').
-        ($$srcdoc !== '' ? " srcdoc='" . htmlspecialchars($$srcdoc, ENT_QUOTES) . "'" : '').
-        ($$name !== '' ? " name='" . htmlspecialchars($$name, ENT_QUOTES) . "'" : '').
-        ($$sandbox !== '' ? " sandbox='" . htmlspecialchars($$sandbox, ENT_QUOTES) . "'" : '').
-        ($$allow !== '' ? " allow='" . htmlspecialchars($$allow, ENT_QUOTES) . "'" : '').
-        ($$allowfullscreen !== '' ? " allowfullscreen='" . htmlspecialchars($$allowfullscreen, ENT_QUOTES) . "'" : '').
-        ($$width !== '' ? " width='" . htmlspecialchars($$width, ENT_QUOTES) . "'" : '').
-        ($$height !== '' ? " height='" . htmlspecialchars($$height, ENT_QUOTES) . "'" : '').
-        ($$referrerpolicy !== '' ? " referrerpolicy='" . htmlspecialchars($$referrerpolicy, ENT_QUOTES) . "'" : '').
-        ($$loading !== '' ? " loading='" . htmlspecialchars($$loading, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<iframe" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+        ($srcdoc !== '' ? " srcdoc='" . htmlspecialchars($srcdoc, ENT_QUOTES) . "'" : '').
+        ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+        ($sandbox !== '' ? " sandbox='" . htmlspecialchars($sandbox, ENT_QUOTES) . "'" : '').
+        ($allow !== '' ? " allow='" . htmlspecialchars($allow, ENT_QUOTES) . "'" : '').
+        ($allowfullscreen !== '' ? " allowfullscreen='" . htmlspecialchars($allowfullscreen, ENT_QUOTES) . "'" : '').
+        ($width !== '' ? " width='" . htmlspecialchars($width, ENT_QUOTES) . "'" : '').
+        ($height !== '' ? " height='" . htmlspecialchars($height, ENT_QUOTES) . "'" : '').
+        ($referrerpolicy !== '' ? " referrerpolicy='" . htmlspecialchars($referrerpolicy, ENT_QUOTES) . "'" : '').
+        ($loading !== '' ? " loading='" . htmlspecialchars($loading, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -2483,40 +2444,40 @@ function img(
     string $title= "",
     string $translate= ""
 ) {
-    return "<img" .     ($$alt !== '' ? " alt='" . htmlspecialchars($$alt, ENT_QUOTES) . "'" : '').
-        ($$src !== '' ? " src='" . htmlspecialchars($$src, ENT_QUOTES) . "'" : '').
-        ($$srcset !== '' ? " srcset='" . htmlspecialchars($$srcset, ENT_QUOTES) . "'" : '').
-        ($$sizes !== '' ? " sizes='" . htmlspecialchars($$sizes, ENT_QUOTES) . "'" : '').
-        ($$crossorigin !== '' ? " crossorigin='" . htmlspecialchars($$crossorigin, ENT_QUOTES) . "'" : '').
-        ($$usemap !== '' ? " usemap='" . htmlspecialchars($$usemap, ENT_QUOTES) . "'" : '').
-        ($$ismap !== '' ? " ismap='" . htmlspecialchars($$ismap, ENT_QUOTES) . "'" : '').
-        ($$width !== '' ? " width='" . htmlspecialchars($$width, ENT_QUOTES) . "'" : '').
-        ($$height !== '' ? " height='" . htmlspecialchars($$height, ENT_QUOTES) . "'" : '').
-        ($$referrerpolicy !== '' ? " referrerpolicy='" . htmlspecialchars($$referrerpolicy, ENT_QUOTES) . "'" : '').
-        ($$decoding !== '' ? " decoding='" . htmlspecialchars($$decoding, ENT_QUOTES) . "'" : '').
-        ($$loading !== '' ? " loading='" . htmlspecialchars($$loading, ENT_QUOTES) . "'" : '').
-        ($$fetchpriority !== '' ? " fetchpriority='" . htmlspecialchars($$fetchpriority, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<img" .     ($alt !== '' ? " alt='" . htmlspecialchars($alt, ENT_QUOTES) . "'" : '').
+        ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+        ($srcset !== '' ? " srcset='" . htmlspecialchars($srcset, ENT_QUOTES) . "'" : '').
+        ($sizes !== '' ? " sizes='" . htmlspecialchars($sizes, ENT_QUOTES) . "'" : '').
+        ($crossorigin !== '' ? " crossorigin='" . htmlspecialchars($crossorigin, ENT_QUOTES) . "'" : '').
+        ($usemap !== '' ? " usemap='" . htmlspecialchars($usemap, ENT_QUOTES) . "'" : '').
+        ($ismap !== '' ? " ismap='" . htmlspecialchars($ismap, ENT_QUOTES) . "'" : '').
+        ($width !== '' ? " width='" . htmlspecialchars($width, ENT_QUOTES) . "'" : '').
+        ($height !== '' ? " height='" . htmlspecialchars($height, ENT_QUOTES) . "'" : '').
+        ($referrerpolicy !== '' ? " referrerpolicy='" . htmlspecialchars($referrerpolicy, ENT_QUOTES) . "'" : '').
+        ($decoding !== '' ? " decoding='" . htmlspecialchars($decoding, ENT_QUOTES) . "'" : '').
+        ($loading !== '' ? " loading='" . htmlspecialchars($loading, ENT_QUOTES) . "'" : '').
+        ($fetchpriority !== '' ? " fetchpriority='" . htmlspecialchars($fetchpriority, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -2575,59 +2536,59 @@ function input(
     string $title= "",
     string $translate= ""
 ) {
-    return "<input" .     ($$accept !== '' ? " accept='" . htmlspecialchars($$accept, ENT_QUOTES) . "'" : '').
-        ($$alt !== '' ? " alt='" . htmlspecialchars($$alt, ENT_QUOTES) . "'" : '').
-        ($$autocomplete !== '' ? " autocomplete='" . htmlspecialchars($$autocomplete, ENT_QUOTES) . "'" : '').
-        ($$checked !== '' ? " checked='" . htmlspecialchars($$checked, ENT_QUOTES) . "'" : '').
-        ($$dirname !== '' ? " dirname='" . htmlspecialchars($$dirname, ENT_QUOTES) . "'" : '').
-        ($$disabled !== '' ? " disabled='" . htmlspecialchars($$disabled, ENT_QUOTES) . "'" : '').
-        ($$form !== '' ? " form='" . htmlspecialchars($$form, ENT_QUOTES) . "'" : '').
-        ($$formaction !== '' ? " formaction='" . htmlspecialchars($$formaction, ENT_QUOTES) . "'" : '').
-        ($$formenctype !== '' ? " formenctype='" . htmlspecialchars($$formenctype, ENT_QUOTES) . "'" : '').
-        ($$formmethod !== '' ? " formmethod='" . htmlspecialchars($$formmethod, ENT_QUOTES) . "'" : '').
-        ($$formnovalidate !== '' ? " formnovalidate='" . htmlspecialchars($$formnovalidate, ENT_QUOTES) . "'" : '').
-        ($$formtarget !== '' ? " formtarget='" . htmlspecialchars($$formtarget, ENT_QUOTES) . "'" : '').
-        ($$height !== '' ? " height='" . htmlspecialchars($$height, ENT_QUOTES) . "'" : '').
-        ($$list !== '' ? " list='" . htmlspecialchars($$list, ENT_QUOTES) . "'" : '').
-        ($$max !== '' ? " max='" . htmlspecialchars($$max, ENT_QUOTES) . "'" : '').
-        ($$maxlength !== '' ? " maxlength='" . htmlspecialchars($$maxlength, ENT_QUOTES) . "'" : '').
-        ($$min !== '' ? " min='" . htmlspecialchars($$min, ENT_QUOTES) . "'" : '').
-        ($$minlength !== '' ? " minlength='" . htmlspecialchars($$minlength, ENT_QUOTES) . "'" : '').
-        ($$multiple !== '' ? " multiple='" . htmlspecialchars($$multiple, ENT_QUOTES) . "'" : '').
-        ($$name !== '' ? " name='" . htmlspecialchars($$name, ENT_QUOTES) . "'" : '').
-        ($$pattern !== '' ? " pattern='" . htmlspecialchars($$pattern, ENT_QUOTES) . "'" : '').
-        ($$placeholder !== '' ? " placeholder='" . htmlspecialchars($$placeholder, ENT_QUOTES) . "'" : '').
-        ($$popovertarget !== '' ? " popovertarget='" . htmlspecialchars($$popovertarget, ENT_QUOTES) . "'" : '').
-        ($$popovertargetaction !== '' ? " popovertargetaction='" . htmlspecialchars($$popovertargetaction, ENT_QUOTES) . "'" : '').
-        ($$readonly !== '' ? " readonly='" . htmlspecialchars($$readonly, ENT_QUOTES) . "'" : '').
-        ($$required !== '' ? " required='" . htmlspecialchars($$required, ENT_QUOTES) . "'" : '').
-        ($$size !== '' ? " size='" . htmlspecialchars($$size, ENT_QUOTES) . "'" : '').
-        ($$src !== '' ? " src='" . htmlspecialchars($$src, ENT_QUOTES) . "'" : '').
-        ($$step !== '' ? " step='" . htmlspecialchars($$step, ENT_QUOTES) . "'" : '').
-        ($$type !== '' ? " type='" . htmlspecialchars($$type, ENT_QUOTES) . "'" : '').
-        ($$value !== '' ? " value='" . htmlspecialchars($$value, ENT_QUOTES) . "'" : '').
-        ($$width !== '' ? " width='" . htmlspecialchars($$width, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<input" .     ($accept !== '' ? " accept='" . htmlspecialchars($accept, ENT_QUOTES) . "'" : '').
+        ($alt !== '' ? " alt='" . htmlspecialchars($alt, ENT_QUOTES) . "'" : '').
+        ($autocomplete !== '' ? " autocomplete='" . htmlspecialchars($autocomplete, ENT_QUOTES) . "'" : '').
+        ($checked !== '' ? " checked='" . htmlspecialchars($checked, ENT_QUOTES) . "'" : '').
+        ($dirname !== '' ? " dirname='" . htmlspecialchars($dirname, ENT_QUOTES) . "'" : '').
+        ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
+        ($form !== '' ? " form='" . htmlspecialchars($form, ENT_QUOTES) . "'" : '').
+        ($formaction !== '' ? " formaction='" . htmlspecialchars($formaction, ENT_QUOTES) . "'" : '').
+        ($formenctype !== '' ? " formenctype='" . htmlspecialchars($formenctype, ENT_QUOTES) . "'" : '').
+        ($formmethod !== '' ? " formmethod='" . htmlspecialchars($formmethod, ENT_QUOTES) . "'" : '').
+        ($formnovalidate !== '' ? " formnovalidate='" . htmlspecialchars($formnovalidate, ENT_QUOTES) . "'" : '').
+        ($formtarget !== '' ? " formtarget='" . htmlspecialchars($formtarget, ENT_QUOTES) . "'" : '').
+        ($height !== '' ? " height='" . htmlspecialchars($height, ENT_QUOTES) . "'" : '').
+        ($list !== '' ? " list='" . htmlspecialchars($list, ENT_QUOTES) . "'" : '').
+        ($max !== '' ? " max='" . htmlspecialchars($max, ENT_QUOTES) . "'" : '').
+        ($maxlength !== '' ? " maxlength='" . htmlspecialchars($maxlength, ENT_QUOTES) . "'" : '').
+        ($min !== '' ? " min='" . htmlspecialchars($min, ENT_QUOTES) . "'" : '').
+        ($minlength !== '' ? " minlength='" . htmlspecialchars($minlength, ENT_QUOTES) . "'" : '').
+        ($multiple !== '' ? " multiple='" . htmlspecialchars($multiple, ENT_QUOTES) . "'" : '').
+        ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+        ($pattern !== '' ? " pattern='" . htmlspecialchars($pattern, ENT_QUOTES) . "'" : '').
+        ($placeholder !== '' ? " placeholder='" . htmlspecialchars($placeholder, ENT_QUOTES) . "'" : '').
+        ($popovertarget !== '' ? " popovertarget='" . htmlspecialchars($popovertarget, ENT_QUOTES) . "'" : '').
+        ($popovertargetaction !== '' ? " popovertargetaction='" . htmlspecialchars($popovertargetaction, ENT_QUOTES) . "'" : '').
+        ($readonly !== '' ? " readonly='" . htmlspecialchars($readonly, ENT_QUOTES) . "'" : '').
+        ($required !== '' ? " required='" . htmlspecialchars($required, ENT_QUOTES) . "'" : '').
+        ($size !== '' ? " size='" . htmlspecialchars($size, ENT_QUOTES) . "'" : '').
+        ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+        ($step !== '' ? " step='" . htmlspecialchars($step, ENT_QUOTES) . "'" : '').
+        ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
+        ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
+        ($width !== '' ? " width='" . htmlspecialchars($width, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -2657,30 +2618,29 @@ function ins(
     string $title= "",
     string $translate= ""
 ) {
-    return "<ins" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$cite !== '' ? " cite='" . htmlspecialchars($$cite, ENT_QUOTES) . "'" : '').
-        ($$datetime !== '' ? " datetime='" . htmlspecialchars($$datetime, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</ins>";
+    return "<ins" .     ($cite !== '' ? " cite='" . htmlspecialchars($cite, ENT_QUOTES) . "'" : '').
+        ($datetime !== '' ? " datetime='" . htmlspecialchars($datetime, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</ins>";
     
 }
 
@@ -2708,28 +2668,27 @@ function kbd(
     string $title= "",
     string $translate= ""
 ) {
-    return "<kbd" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</kbd>";
+    return "<kbd" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</kbd>";
     
 }
 
@@ -2758,29 +2717,28 @@ function label(
     string $title= "",
     string $translate= ""
 ) {
-    return "<label" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$for !== '' ? " for='" . htmlspecialchars($$for, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</label>";
+    return "<label" .     ($for !== '' ? " for='" . htmlspecialchars($for, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</label>";
     
 }
 
@@ -2808,28 +2766,27 @@ function legend(
     string $title= "",
     string $translate= ""
 ) {
-    return "<legend" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</legend>";
+    return "<legend" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</legend>";
     
 }
 
@@ -2858,29 +2815,28 @@ function li(
     string $title= "",
     string $translate= ""
 ) {
-    return "<li" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$value !== '' ? " value='" . htmlspecialchars($$value, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</li>";
+    return "<li" .     ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</li>";
     
 }
 
@@ -2923,43 +2879,43 @@ function link(
     string $title= "",
     string $translate= ""
 ) {
-    return "<link" .     ($$href !== '' ? " href='" . htmlspecialchars($$href, ENT_QUOTES) . "'" : '').
-        ($$crossorigin !== '' ? " crossorigin='" . htmlspecialchars($$crossorigin, ENT_QUOTES) . "'" : '').
-        ($$rel !== '' ? " rel='" . htmlspecialchars($$rel, ENT_QUOTES) . "'" : '').
-        ($$as !== '' ? " as='" . htmlspecialchars($$as, ENT_QUOTES) . "'" : '').
-        ($$media !== '' ? " media='" . htmlspecialchars($$media, ENT_QUOTES) . "'" : '').
-        ($$hreflang !== '' ? " hreflang='" . htmlspecialchars($$hreflang, ENT_QUOTES) . "'" : '').
-        ($$type !== '' ? " type='" . htmlspecialchars($$type, ENT_QUOTES) . "'" : '').
-        ($$sizes !== '' ? " sizes='" . htmlspecialchars($$sizes, ENT_QUOTES) . "'" : '').
-        ($$imagesrcset !== '' ? " imagesrcset='" . htmlspecialchars($$imagesrcset, ENT_QUOTES) . "'" : '').
-        ($$imagesizes !== '' ? " imagesizes='" . htmlspecialchars($$imagesizes, ENT_QUOTES) . "'" : '').
-        ($$referrerpolicy !== '' ? " referrerpolicy='" . htmlspecialchars($$referrerpolicy, ENT_QUOTES) . "'" : '').
-        ($$integrity !== '' ? " integrity='" . htmlspecialchars($$integrity, ENT_QUOTES) . "'" : '').
-        ($$blocking !== '' ? " blocking='" . htmlspecialchars($$blocking, ENT_QUOTES) . "'" : '').
-        ($$color !== '' ? " color='" . htmlspecialchars($$color, ENT_QUOTES) . "'" : '').
-        ($$disabled !== '' ? " disabled='" . htmlspecialchars($$disabled, ENT_QUOTES) . "'" : '').
-        ($$fetchpriority !== '' ? " fetchpriority='" . htmlspecialchars($$fetchpriority, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<link" .     ($href !== '' ? " href='" . htmlspecialchars($href, ENT_QUOTES) . "'" : '').
+        ($crossorigin !== '' ? " crossorigin='" . htmlspecialchars($crossorigin, ENT_QUOTES) . "'" : '').
+        ($rel !== '' ? " rel='" . htmlspecialchars($rel, ENT_QUOTES) . "'" : '').
+        ($as !== '' ? " as='" . htmlspecialchars($as, ENT_QUOTES) . "'" : '').
+        ($media !== '' ? " media='" . htmlspecialchars($media, ENT_QUOTES) . "'" : '').
+        ($hreflang !== '' ? " hreflang='" . htmlspecialchars($hreflang, ENT_QUOTES) . "'" : '').
+        ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
+        ($sizes !== '' ? " sizes='" . htmlspecialchars($sizes, ENT_QUOTES) . "'" : '').
+        ($imagesrcset !== '' ? " imagesrcset='" . htmlspecialchars($imagesrcset, ENT_QUOTES) . "'" : '').
+        ($imagesizes !== '' ? " imagesizes='" . htmlspecialchars($imagesizes, ENT_QUOTES) . "'" : '').
+        ($referrerpolicy !== '' ? " referrerpolicy='" . htmlspecialchars($referrerpolicy, ENT_QUOTES) . "'" : '').
+        ($integrity !== '' ? " integrity='" . htmlspecialchars($integrity, ENT_QUOTES) . "'" : '').
+        ($blocking !== '' ? " blocking='" . htmlspecialchars($blocking, ENT_QUOTES) . "'" : '').
+        ($color !== '' ? " color='" . htmlspecialchars($color, ENT_QUOTES) . "'" : '').
+        ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
+        ($fetchpriority !== '' ? " fetchpriority='" . htmlspecialchars($fetchpriority, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -2987,28 +2943,27 @@ function main(
     string $title= "",
     string $translate= ""
 ) {
-    return "<main" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</main>";
+    return "<main" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</main>";
     
 }
 
@@ -3037,29 +2992,28 @@ function map(
     string $title= "",
     string $translate= ""
 ) {
-    return "<map" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$name !== '' ? " name='" . htmlspecialchars($$name, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</map>";
+    return "<map" .     ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</map>";
     
 }
 
@@ -3087,28 +3041,27 @@ function mark(
     string $title= "",
     string $translate= ""
 ) {
-    return "<mark" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</mark>";
+    return "<mark" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</mark>";
     
 }
 
@@ -3136,28 +3089,27 @@ function math(
     string $title= "",
     string $translate= ""
 ) {
-    return "<math" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</math>";
+    return "<math" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</math>";
     
 }
 
@@ -3185,28 +3137,27 @@ function menu(
     string $title= "",
     string $translate= ""
 ) {
-    return "<menu" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</menu>";
+    return "<menu" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</menu>";
     
 }
 
@@ -3238,32 +3189,32 @@ function meta(
     string $title= "",
     string $translate= ""
 ) {
-    return "<meta" .     ($$name !== '' ? " name='" . htmlspecialchars($$name, ENT_QUOTES) . "'" : '').
-        ($$httpEquiv !== '' ? " http-equiv='" . htmlspecialchars($$httpEquiv, ENT_QUOTES) . "'" : '').
-        ($$content !== '' ? " content='" . htmlspecialchars($$content, ENT_QUOTES) . "'" : '').
-        ($$charset !== '' ? " charset='" . htmlspecialchars($$charset, ENT_QUOTES) . "'" : '').
-        ($$media !== '' ? " media='" . htmlspecialchars($$media, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<meta" .     ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+        ($httpEquiv !== '' ? " http-equiv='" . htmlspecialchars($httpEquiv, ENT_QUOTES) . "'" : '').
+        ($content !== '' ? " content='" . htmlspecialchars($content, ENT_QUOTES) . "'" : '').
+        ($charset !== '' ? " charset='" . htmlspecialchars($charset, ENT_QUOTES) . "'" : '').
+        ($media !== '' ? " media='" . htmlspecialchars($media, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -3297,34 +3248,33 @@ function meter(
     string $title= "",
     string $translate= ""
 ) {
-    return "<meter" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$value !== '' ? " value='" . htmlspecialchars($$value, ENT_QUOTES) . "'" : '').
-        ($$min !== '' ? " min='" . htmlspecialchars($$min, ENT_QUOTES) . "'" : '').
-        ($$max !== '' ? " max='" . htmlspecialchars($$max, ENT_QUOTES) . "'" : '').
-        ($$low !== '' ? " low='" . htmlspecialchars($$low, ENT_QUOTES) . "'" : '').
-        ($$high !== '' ? " high='" . htmlspecialchars($$high, ENT_QUOTES) . "'" : '').
-        ($$optimum !== '' ? " optimum='" . htmlspecialchars($$optimum, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</meter>";
+    return "<meter" .     ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
+        ($min !== '' ? " min='" . htmlspecialchars($min, ENT_QUOTES) . "'" : '').
+        ($max !== '' ? " max='" . htmlspecialchars($max, ENT_QUOTES) . "'" : '').
+        ($low !== '' ? " low='" . htmlspecialchars($low, ENT_QUOTES) . "'" : '').
+        ($high !== '' ? " high='" . htmlspecialchars($high, ENT_QUOTES) . "'" : '').
+        ($optimum !== '' ? " optimum='" . htmlspecialchars($optimum, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</meter>";
     
 }
 
@@ -3352,28 +3302,27 @@ function nav(
     string $title= "",
     string $translate= ""
 ) {
-    return "<nav" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</nav>";
+    return "<nav" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</nav>";
     
 }
 
@@ -3401,28 +3350,27 @@ function noscript(
     string $title= "",
     string $translate= ""
 ) {
-    return "<noscript" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</noscript>";
+    return "<noscript" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</noscript>";
     
 }
 
@@ -3456,34 +3404,33 @@ function object(
     string $title= "",
     string $translate= ""
 ) {
-    return "<object" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$data !== '' ? " data='" . htmlspecialchars($$data, ENT_QUOTES) . "'" : '').
-        ($$type !== '' ? " type='" . htmlspecialchars($$type, ENT_QUOTES) . "'" : '').
-        ($$name !== '' ? " name='" . htmlspecialchars($$name, ENT_QUOTES) . "'" : '').
-        ($$form !== '' ? " form='" . htmlspecialchars($$form, ENT_QUOTES) . "'" : '').
-        ($$width !== '' ? " width='" . htmlspecialchars($$width, ENT_QUOTES) . "'" : '').
-        ($$height !== '' ? " height='" . htmlspecialchars($$height, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</object>";
+    return "<object" .     ($data !== '' ? " data='" . htmlspecialchars($data, ENT_QUOTES) . "'" : '').
+        ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
+        ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+        ($form !== '' ? " form='" . htmlspecialchars($form, ENT_QUOTES) . "'" : '').
+        ($width !== '' ? " width='" . htmlspecialchars($width, ENT_QUOTES) . "'" : '').
+        ($height !== '' ? " height='" . htmlspecialchars($height, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</object>";
     
 }
 
@@ -3514,31 +3461,30 @@ function ol(
     string $title= "",
     string $translate= ""
 ) {
-    return "<ol" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$reversed !== '' ? " reversed='" . htmlspecialchars($$reversed, ENT_QUOTES) . "'" : '').
-        ($$start !== '' ? " start='" . htmlspecialchars($$start, ENT_QUOTES) . "'" : '').
-        ($$type !== '' ? " type='" . htmlspecialchars($$type, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</ol>";
+    return "<ol" .     ($reversed !== '' ? " reversed='" . htmlspecialchars($reversed, ENT_QUOTES) . "'" : '').
+        ($start !== '' ? " start='" . htmlspecialchars($start, ENT_QUOTES) . "'" : '').
+        ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</ol>";
     
 }
 
@@ -3568,30 +3514,29 @@ function optgroup(
     string $title= "",
     string $translate= ""
 ) {
-    return "<optgroup" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$disabled !== '' ? " disabled='" . htmlspecialchars($$disabled, ENT_QUOTES) . "'" : '').
-        ($$label !== '' ? " label='" . htmlspecialchars($$label, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</optgroup>";
+    return "<optgroup" .     ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
+        ($label !== '' ? " label='" . htmlspecialchars($label, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</optgroup>";
     
 }
 
@@ -3623,32 +3568,31 @@ function option(
     string $title= "",
     string $translate= ""
 ) {
-    return "<option" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$disabled !== '' ? " disabled='" . htmlspecialchars($$disabled, ENT_QUOTES) . "'" : '').
-        ($$label !== '' ? " label='" . htmlspecialchars($$label, ENT_QUOTES) . "'" : '').
-        ($$selected !== '' ? " selected='" . htmlspecialchars($$selected, ENT_QUOTES) . "'" : '').
-        ($$value !== '' ? " value='" . htmlspecialchars($$value, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</option>";
+    return "<option" .     ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
+        ($label !== '' ? " label='" . htmlspecialchars($label, ENT_QUOTES) . "'" : '').
+        ($selected !== '' ? " selected='" . htmlspecialchars($selected, ENT_QUOTES) . "'" : '').
+        ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</option>";
     
 }
 
@@ -3679,31 +3623,30 @@ function output(
     string $title= "",
     string $translate= ""
 ) {
-    return "<output" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$for !== '' ? " for='" . htmlspecialchars($$for, ENT_QUOTES) . "'" : '').
-        ($$form !== '' ? " form='" . htmlspecialchars($$form, ENT_QUOTES) . "'" : '').
-        ($$name !== '' ? " name='" . htmlspecialchars($$name, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</output>";
+    return "<output" .     ($for !== '' ? " for='" . htmlspecialchars($for, ENT_QUOTES) . "'" : '').
+        ($form !== '' ? " form='" . htmlspecialchars($form, ENT_QUOTES) . "'" : '').
+        ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</output>";
     
 }
 
@@ -3731,28 +3674,27 @@ function p(
     string $title= "",
     string $translate= ""
 ) {
-    return "<p" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</p>";
+    return "<p" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</p>";
     
 }
 
@@ -3780,28 +3722,27 @@ function picture(
     string $title= "",
     string $translate= ""
 ) {
-    return "<picture" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</picture>";
+    return "<picture" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</picture>";
     
 }
 
@@ -3829,28 +3770,27 @@ function pre(
     string $title= "",
     string $translate= ""
 ) {
-    return "<pre" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</pre>";
+    return "<pre" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</pre>";
     
 }
 
@@ -3880,30 +3820,29 @@ function progress(
     string $title= "",
     string $translate= ""
 ) {
-    return "<progress" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$value !== '' ? " value='" . htmlspecialchars($$value, ENT_QUOTES) . "'" : '').
-        ($$max !== '' ? " max='" . htmlspecialchars($$max, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</progress>";
+    return "<progress" .     ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
+        ($max !== '' ? " max='" . htmlspecialchars($max, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</progress>";
     
 }
 
@@ -3932,29 +3871,28 @@ function q(
     string $title= "",
     string $translate= ""
 ) {
-    return "<q" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$cite !== '' ? " cite='" . htmlspecialchars($$cite, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</q>";
+    return "<q" .     ($cite !== '' ? " cite='" . htmlspecialchars($cite, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</q>";
     
 }
 
@@ -3982,28 +3920,27 @@ function rp(
     string $title= "",
     string $translate= ""
 ) {
-    return "<rp" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</rp>";
+    return "<rp" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</rp>";
     
 }
 
@@ -4031,28 +3968,27 @@ function rt(
     string $title= "",
     string $translate= ""
 ) {
-    return "<rt" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</rt>";
+    return "<rt" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</rt>";
     
 }
 
@@ -4080,28 +4016,27 @@ function ruby(
     string $title= "",
     string $translate= ""
 ) {
-    return "<ruby" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</ruby>";
+    return "<ruby" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</ruby>";
     
 }
 
@@ -4129,28 +4064,27 @@ function s(
     string $title= "",
     string $translate= ""
 ) {
-    return "<s" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</s>";
+    return "<s" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</s>";
     
 }
 
@@ -4178,28 +4112,27 @@ function samp(
     string $title= "",
     string $translate= ""
 ) {
-    return "<samp" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</samp>";
+    return "<samp" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</samp>";
     
 }
 
@@ -4237,38 +4170,37 @@ function script(
     string $title= "",
     string $translate= ""
 ) {
-    return "<script" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$src !== '' ? " src='" . htmlspecialchars($$src, ENT_QUOTES) . "'" : '').
-        ($$type !== '' ? " type='" . htmlspecialchars($$type, ENT_QUOTES) . "'" : '').
-        ($$nomodule !== '' ? " nomodule='" . htmlspecialchars($$nomodule, ENT_QUOTES) . "'" : '').
-        ($$async !== '' ? " async='" . htmlspecialchars($$async, ENT_QUOTES) . "'" : '').
-        ($$defer !== '' ? " defer='" . htmlspecialchars($$defer, ENT_QUOTES) . "'" : '').
-        ($$crossorigin !== '' ? " crossorigin='" . htmlspecialchars($$crossorigin, ENT_QUOTES) . "'" : '').
-        ($$integrity !== '' ? " integrity='" . htmlspecialchars($$integrity, ENT_QUOTES) . "'" : '').
-        ($$referrerpolicy !== '' ? " referrerpolicy='" . htmlspecialchars($$referrerpolicy, ENT_QUOTES) . "'" : '').
-        ($$blocking !== '' ? " blocking='" . htmlspecialchars($$blocking, ENT_QUOTES) . "'" : '').
-        ($$fetchpriority !== '' ? " fetchpriority='" . htmlspecialchars($$fetchpriority, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</script>";
+    return "<script" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+        ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
+        ($nomodule !== '' ? " nomodule='" . htmlspecialchars($nomodule, ENT_QUOTES) . "'" : '').
+        ($async !== '' ? " async='" . htmlspecialchars($async, ENT_QUOTES) . "'" : '').
+        ($defer !== '' ? " defer='" . htmlspecialchars($defer, ENT_QUOTES) . "'" : '').
+        ($crossorigin !== '' ? " crossorigin='" . htmlspecialchars($crossorigin, ENT_QUOTES) . "'" : '').
+        ($integrity !== '' ? " integrity='" . htmlspecialchars($integrity, ENT_QUOTES) . "'" : '').
+        ($referrerpolicy !== '' ? " referrerpolicy='" . htmlspecialchars($referrerpolicy, ENT_QUOTES) . "'" : '').
+        ($blocking !== '' ? " blocking='" . htmlspecialchars($blocking, ENT_QUOTES) . "'" : '').
+        ($fetchpriority !== '' ? " fetchpriority='" . htmlspecialchars($fetchpriority, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</script>";
     
 }
 
@@ -4296,28 +4228,27 @@ function search(
     string $title= "",
     string $translate= ""
 ) {
-    return "<search" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</search>";
+    return "<search" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</search>";
     
 }
 
@@ -4345,28 +4276,27 @@ function section(
     string $title= "",
     string $translate= ""
 ) {
-    return "<section" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</section>";
+    return "<section" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</section>";
     
 }
 
@@ -4401,35 +4331,34 @@ function select(
     string $title= "",
     string $translate= ""
 ) {
-    return "<select" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$autocomplete !== '' ? " autocomplete='" . htmlspecialchars($$autocomplete, ENT_QUOTES) . "'" : '').
-        ($$disabled !== '' ? " disabled='" . htmlspecialchars($$disabled, ENT_QUOTES) . "'" : '').
-        ($$form !== '' ? " form='" . htmlspecialchars($$form, ENT_QUOTES) . "'" : '').
-        ($$multiple !== '' ? " multiple='" . htmlspecialchars($$multiple, ENT_QUOTES) . "'" : '').
-        ($$name !== '' ? " name='" . htmlspecialchars($$name, ENT_QUOTES) . "'" : '').
-        ($$required !== '' ? " required='" . htmlspecialchars($$required, ENT_QUOTES) . "'" : '').
-        ($$size !== '' ? " size='" . htmlspecialchars($$size, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</select>";
+    return "<select" .     ($autocomplete !== '' ? " autocomplete='" . htmlspecialchars($autocomplete, ENT_QUOTES) . "'" : '').
+        ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
+        ($form !== '' ? " form='" . htmlspecialchars($form, ENT_QUOTES) . "'" : '').
+        ($multiple !== '' ? " multiple='" . htmlspecialchars($multiple, ENT_QUOTES) . "'" : '').
+        ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+        ($required !== '' ? " required='" . htmlspecialchars($required, ENT_QUOTES) . "'" : '').
+        ($size !== '' ? " size='" . htmlspecialchars($size, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</select>";
     
 }
 
@@ -4458,29 +4387,28 @@ function slot(
     string $title= "",
     string $translate= ""
 ) {
-    return "<slot" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$name !== '' ? " name='" . htmlspecialchars($$name, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</slot>";
+    return "<slot" .     ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</slot>";
     
 }
 
@@ -4508,28 +4436,27 @@ function small(
     string $title= "",
     string $translate= ""
 ) {
-    return "<small" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</small>";
+    return "<small" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</small>";
     
 }
 
@@ -4563,34 +4490,34 @@ function source(
     string $title= "",
     string $translate= ""
 ) {
-    return "<source" .     ($$type !== '' ? " type='" . htmlspecialchars($$type, ENT_QUOTES) . "'" : '').
-        ($$media !== '' ? " media='" . htmlspecialchars($$media, ENT_QUOTES) . "'" : '').
-        ($$src !== '' ? " src='" . htmlspecialchars($$src, ENT_QUOTES) . "'" : '').
-        ($$srcset !== '' ? " srcset='" . htmlspecialchars($$srcset, ENT_QUOTES) . "'" : '').
-        ($$sizes !== '' ? " sizes='" . htmlspecialchars($$sizes, ENT_QUOTES) . "'" : '').
-        ($$width !== '' ? " width='" . htmlspecialchars($$width, ENT_QUOTES) . "'" : '').
-        ($$height !== '' ? " height='" . htmlspecialchars($$height, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<source" .     ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
+        ($media !== '' ? " media='" . htmlspecialchars($media, ENT_QUOTES) . "'" : '').
+        ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+        ($srcset !== '' ? " srcset='" . htmlspecialchars($srcset, ENT_QUOTES) . "'" : '').
+        ($sizes !== '' ? " sizes='" . htmlspecialchars($sizes, ENT_QUOTES) . "'" : '').
+        ($width !== '' ? " width='" . htmlspecialchars($width, ENT_QUOTES) . "'" : '').
+        ($height !== '' ? " height='" . htmlspecialchars($height, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -4618,28 +4545,27 @@ function span(
     string $title= "",
     string $translate= ""
 ) {
-    return "<span" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</span>";
+    return "<span" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</span>";
     
 }
 
@@ -4667,28 +4593,27 @@ function strong(
     string $title= "",
     string $translate= ""
 ) {
-    return "<strong" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</strong>";
+    return "<strong" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</strong>";
     
 }
 
@@ -4718,30 +4643,29 @@ function style(
     string $title= "",
     string $translate= ""
 ) {
-    return "<style" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$media !== '' ? " media='" . htmlspecialchars($$media, ENT_QUOTES) . "'" : '').
-        ($$blocking !== '' ? " blocking='" . htmlspecialchars($$blocking, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</style>";
+    return "<style" .     ($media !== '' ? " media='" . htmlspecialchars($media, ENT_QUOTES) . "'" : '').
+        ($blocking !== '' ? " blocking='" . htmlspecialchars($blocking, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</style>";
     
 }
 
@@ -4769,28 +4693,27 @@ function sub(
     string $title= "",
     string $translate= ""
 ) {
-    return "<sub" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</sub>";
+    return "<sub" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</sub>";
     
 }
 
@@ -4818,28 +4741,27 @@ function summary(
     string $title= "",
     string $translate= ""
 ) {
-    return "<summary" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</summary>";
+    return "<summary" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</summary>";
     
 }
 
@@ -4867,28 +4789,27 @@ function sup(
     string $title= "",
     string $translate= ""
 ) {
-    return "<sup" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</sup>";
+    return "<sup" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</sup>";
     
 }
 
@@ -4916,28 +4837,27 @@ function svg(
     string $title= "",
     string $translate= ""
 ) {
-    return "<svg" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</svg>";
+    return "<svg" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</svg>";
     
 }
 
@@ -4965,28 +4885,27 @@ function table(
     string $title= "",
     string $translate= ""
 ) {
-    return "<table" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</table>";
+    return "<table" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</table>";
     
 }
 
@@ -5014,28 +4933,27 @@ function tbody(
     string $title= "",
     string $translate= ""
 ) {
-    return "<tbody" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</tbody>";
+    return "<tbody" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</tbody>";
     
 }
 
@@ -5066,31 +4984,30 @@ function td(
     string $title= "",
     string $translate= ""
 ) {
-    return "<td" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$colspan !== '' ? " colspan='" . htmlspecialchars($$colspan, ENT_QUOTES) . "'" : '').
-        ($$rowspan !== '' ? " rowspan='" . htmlspecialchars($$rowspan, ENT_QUOTES) . "'" : '').
-        ($$headers !== '' ? " headers='" . htmlspecialchars($$headers, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</td>";
+    return "<td" .     ($colspan !== '' ? " colspan='" . htmlspecialchars($colspan, ENT_QUOTES) . "'" : '').
+        ($rowspan !== '' ? " rowspan='" . htmlspecialchars($rowspan, ENT_QUOTES) . "'" : '').
+        ($headers !== '' ? " headers='" . htmlspecialchars($headers, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</td>";
     
 }
 
@@ -5121,31 +5038,31 @@ function template(
     string $title= "",
     string $translate= ""
 ) {
-    return "<template" .     ($$shadowrootmode !== '' ? " shadowrootmode='" . htmlspecialchars($$shadowrootmode, ENT_QUOTES) . "'" : '').
-        ($$shadowrootdelegatesfocus !== '' ? " shadowrootdelegatesfocus='" . htmlspecialchars($$shadowrootdelegatesfocus, ENT_QUOTES) . "'" : '').
-        ($$shadowrootclonable !== '' ? " shadowrootclonable='" . htmlspecialchars($$shadowrootclonable, ENT_QUOTES) . "'" : '').
-        ($$shadowrootserializable !== '' ? " shadowrootserializable='" . htmlspecialchars($$shadowrootserializable, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<template" .     ($shadowrootmode !== '' ? " shadowrootmode='" . htmlspecialchars($shadowrootmode, ENT_QUOTES) . "'" : '').
+        ($shadowrootdelegatesfocus !== '' ? " shadowrootdelegatesfocus='" . htmlspecialchars($shadowrootdelegatesfocus, ENT_QUOTES) . "'" : '').
+        ($shadowrootclonable !== '' ? " shadowrootclonable='" . htmlspecialchars($shadowrootclonable, ENT_QUOTES) . "'" : '').
+        ($shadowrootserializable !== '' ? " shadowrootserializable='" . htmlspecialchars($shadowrootserializable, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -5186,41 +5103,40 @@ function textarea(
     string $title= "",
     string $translate= ""
 ) {
-    return "<textarea" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$autocomplete !== '' ? " autocomplete='" . htmlspecialchars($$autocomplete, ENT_QUOTES) . "'" : '').
-        ($$cols !== '' ? " cols='" . htmlspecialchars($$cols, ENT_QUOTES) . "'" : '').
-        ($$dirname !== '' ? " dirname='" . htmlspecialchars($$dirname, ENT_QUOTES) . "'" : '').
-        ($$disabled !== '' ? " disabled='" . htmlspecialchars($$disabled, ENT_QUOTES) . "'" : '').
-        ($$form !== '' ? " form='" . htmlspecialchars($$form, ENT_QUOTES) . "'" : '').
-        ($$maxlength !== '' ? " maxlength='" . htmlspecialchars($$maxlength, ENT_QUOTES) . "'" : '').
-        ($$minlength !== '' ? " minlength='" . htmlspecialchars($$minlength, ENT_QUOTES) . "'" : '').
-        ($$name !== '' ? " name='" . htmlspecialchars($$name, ENT_QUOTES) . "'" : '').
-        ($$placeholder !== '' ? " placeholder='" . htmlspecialchars($$placeholder, ENT_QUOTES) . "'" : '').
-        ($$readonly !== '' ? " readonly='" . htmlspecialchars($$readonly, ENT_QUOTES) . "'" : '').
-        ($$required !== '' ? " required='" . htmlspecialchars($$required, ENT_QUOTES) . "'" : '').
-        ($$rows !== '' ? " rows='" . htmlspecialchars($$rows, ENT_QUOTES) . "'" : '').
-        ($$wrap !== '' ? " wrap='" . htmlspecialchars($$wrap, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</textarea>";
+    return "<textarea" .     ($autocomplete !== '' ? " autocomplete='" . htmlspecialchars($autocomplete, ENT_QUOTES) . "'" : '').
+        ($cols !== '' ? " cols='" . htmlspecialchars($cols, ENT_QUOTES) . "'" : '').
+        ($dirname !== '' ? " dirname='" . htmlspecialchars($dirname, ENT_QUOTES) . "'" : '').
+        ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
+        ($form !== '' ? " form='" . htmlspecialchars($form, ENT_QUOTES) . "'" : '').
+        ($maxlength !== '' ? " maxlength='" . htmlspecialchars($maxlength, ENT_QUOTES) . "'" : '').
+        ($minlength !== '' ? " minlength='" . htmlspecialchars($minlength, ENT_QUOTES) . "'" : '').
+        ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+        ($placeholder !== '' ? " placeholder='" . htmlspecialchars($placeholder, ENT_QUOTES) . "'" : '').
+        ($readonly !== '' ? " readonly='" . htmlspecialchars($readonly, ENT_QUOTES) . "'" : '').
+        ($required !== '' ? " required='" . htmlspecialchars($required, ENT_QUOTES) . "'" : '').
+        ($rows !== '' ? " rows='" . htmlspecialchars($rows, ENT_QUOTES) . "'" : '').
+        ($wrap !== '' ? " wrap='" . htmlspecialchars($wrap, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</textarea>";
     
 }
 
@@ -5248,28 +5164,27 @@ function tfoot(
     string $title= "",
     string $translate= ""
 ) {
-    return "<tfoot" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</tfoot>";
+    return "<tfoot" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</tfoot>";
     
 }
 
@@ -5302,33 +5217,32 @@ function th(
     string $title= "",
     string $translate= ""
 ) {
-    return "<th" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$colspan !== '' ? " colspan='" . htmlspecialchars($$colspan, ENT_QUOTES) . "'" : '').
-        ($$rowspan !== '' ? " rowspan='" . htmlspecialchars($$rowspan, ENT_QUOTES) . "'" : '').
-        ($$headers !== '' ? " headers='" . htmlspecialchars($$headers, ENT_QUOTES) . "'" : '').
-        ($$scope !== '' ? " scope='" . htmlspecialchars($$scope, ENT_QUOTES) . "'" : '').
-        ($$abbr !== '' ? " abbr='" . htmlspecialchars($$abbr, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</th>";
+    return "<th" .     ($colspan !== '' ? " colspan='" . htmlspecialchars($colspan, ENT_QUOTES) . "'" : '').
+        ($rowspan !== '' ? " rowspan='" . htmlspecialchars($rowspan, ENT_QUOTES) . "'" : '').
+        ($headers !== '' ? " headers='" . htmlspecialchars($headers, ENT_QUOTES) . "'" : '').
+        ($scope !== '' ? " scope='" . htmlspecialchars($scope, ENT_QUOTES) . "'" : '').
+        ($abbr !== '' ? " abbr='" . htmlspecialchars($abbr, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</th>";
     
 }
 
@@ -5356,28 +5270,27 @@ function thead(
     string $title= "",
     string $translate= ""
 ) {
-    return "<thead" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</thead>";
+    return "<thead" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</thead>";
     
 }
 
@@ -5406,29 +5319,28 @@ function time(
     string $title= "",
     string $translate= ""
 ) {
-    return "<time" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$datetime !== '' ? " datetime='" . htmlspecialchars($$datetime, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</time>";
+    return "<time" .     ($datetime !== '' ? " datetime='" . htmlspecialchars($datetime, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</time>";
     
 }
 
@@ -5456,28 +5368,27 @@ function title(
     string $title= "",
     string $translate= ""
 ) {
-    return "<title" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</title>";
+    return "<title" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</title>";
     
 }
 
@@ -5505,28 +5416,27 @@ function tr(
     string $title= "",
     string $translate= ""
 ) {
-    return "<tr" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</tr>";
+    return "<tr" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</tr>";
     
 }
 
@@ -5558,32 +5468,32 @@ function track(
     string $title= "",
     string $translate= ""
 ) {
-    return "<track" .     ($$default !== '' ? " default='" . htmlspecialchars($$default, ENT_QUOTES) . "'" : '').
-        ($$kind !== '' ? " kind='" . htmlspecialchars($$kind, ENT_QUOTES) . "'" : '').
-        ($$label !== '' ? " label='" . htmlspecialchars($$label, ENT_QUOTES) . "'" : '').
-        ($$src !== '' ? " src='" . htmlspecialchars($$src, ENT_QUOTES) . "'" : '').
-        ($$srclang !== '' ? " srclang='" . htmlspecialchars($$srclang, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<track" .     ($default !== '' ? " default='" . htmlspecialchars($default, ENT_QUOTES) . "'" : '').
+        ($kind !== '' ? " kind='" . htmlspecialchars($kind, ENT_QUOTES) . "'" : '').
+        ($label !== '' ? " label='" . htmlspecialchars($label, ENT_QUOTES) . "'" : '').
+        ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+        ($srclang !== '' ? " srclang='" . htmlspecialchars($srclang, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
@@ -5611,28 +5521,27 @@ function u(
     string $title= "",
     string $translate= ""
 ) {
-    return "<u" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</u>";
+    return "<u" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</u>";
     
 }
 
@@ -5660,28 +5569,27 @@ function ul(
     string $title= "",
     string $translate= ""
 ) {
-    return "<ul" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</ul>";
+    return "<ul" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</ul>";
     
 }
 
@@ -5709,28 +5617,27 @@ function variable(
     string $title= "",
     string $translate= ""
 ) {
-    return "<var" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</var>";
+    return "<var" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</var>";
     
 }
 
@@ -5769,39 +5676,38 @@ function video(
     string $title= "",
     string $translate= ""
 ) {
-    return "<video" .     ($$body !== '' ? " body='" . htmlspecialchars($$body, ENT_QUOTES) . "'" : '').
-        ($$src !== '' ? " src='" . htmlspecialchars($$src, ENT_QUOTES) . "'" : '').
-        ($$crossorigin !== '' ? " crossorigin='" . htmlspecialchars($$crossorigin, ENT_QUOTES) . "'" : '').
-        ($$poster !== '' ? " poster='" . htmlspecialchars($$poster, ENT_QUOTES) . "'" : '').
-        ($$preload !== '' ? " preload='" . htmlspecialchars($$preload, ENT_QUOTES) . "'" : '').
-        ($$autoplay !== '' ? " autoplay='" . htmlspecialchars($$autoplay, ENT_QUOTES) . "'" : '').
-        ($$playsinline !== '' ? " playsinline='" . htmlspecialchars($$playsinline, ENT_QUOTES) . "'" : '').
-        ($$loop !== '' ? " loop='" . htmlspecialchars($$loop, ENT_QUOTES) . "'" : '').
-        ($$muted !== '' ? " muted='" . htmlspecialchars($$muted, ENT_QUOTES) . "'" : '').
-        ($$controls !== '' ? " controls='" . htmlspecialchars($$controls, ENT_QUOTES) . "'" : '').
-        ($$width !== '' ? " width='" . htmlspecialchars($$width, ENT_QUOTES) . "'" : '').
-        ($$height !== '' ? " height='" . htmlspecialchars($$height, ENT_QUOTES) . "'" : '').
-        ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). ">{$body}</video>";
+    return "<video" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+        ($crossorigin !== '' ? " crossorigin='" . htmlspecialchars($crossorigin, ENT_QUOTES) . "'" : '').
+        ($poster !== '' ? " poster='" . htmlspecialchars($poster, ENT_QUOTES) . "'" : '').
+        ($preload !== '' ? " preload='" . htmlspecialchars($preload, ENT_QUOTES) . "'" : '').
+        ($autoplay !== '' ? " autoplay='" . htmlspecialchars($autoplay, ENT_QUOTES) . "'" : '').
+        ($playsinline !== '' ? " playsinline='" . htmlspecialchars($playsinline, ENT_QUOTES) . "'" : '').
+        ($loop !== '' ? " loop='" . htmlspecialchars($loop, ENT_QUOTES) . "'" : '').
+        ($muted !== '' ? " muted='" . htmlspecialchars($muted, ENT_QUOTES) . "'" : '').
+        ($controls !== '' ? " controls='" . htmlspecialchars($controls, ENT_QUOTES) . "'" : '').
+        ($width !== '' ? " width='" . htmlspecialchars($width, ENT_QUOTES) . "'" : '').
+        ($height !== '' ? " height='" . htmlspecialchars($height, ENT_QUOTES) . "'" : '').
+        ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</video>";
     
 }
 
@@ -5828,27 +5734,27 @@ function wbr(
     string $title= "",
     string $translate= ""
 ) {
-    return "<wbr" .     ($$accesskey !== '' ? " accesskey='" . htmlspecialchars($$accesskey, ENT_QUOTES) . "'" : '').
-        ($$autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($$autocapitalize, ENT_QUOTES) . "'" : '').
-        ($$class !== '' ? " class='" . htmlspecialchars($$class, ENT_QUOTES) . "'" : '').
-        ($$contenteditable !== '' ? " contenteditable='" . htmlspecialchars($$contenteditable, ENT_QUOTES) . "'" : '').
-        ($$contextmenu !== '' ? " contextmenu='" . htmlspecialchars($$contextmenu, ENT_QUOTES) . "'" : '').
-        ($$dir !== '' ? " dir='" . htmlspecialchars($$dir, ENT_QUOTES) . "'" : '').
-        ($$draggable !== '' ? " draggable='" . htmlspecialchars($$draggable, ENT_QUOTES) . "'" : '').
-        ($$dropzone !== '' ? " dropzone='" . htmlspecialchars($$dropzone, ENT_QUOTES) . "'" : '').
-        ($$hidden !== '' ? " hidden='" . htmlspecialchars($$hidden, ENT_QUOTES) . "'" : '').
-        ($$id !== '' ? " id='" . htmlspecialchars($$id, ENT_QUOTES) . "'" : '').
-        ($$itemid !== '' ? " itemid='" . htmlspecialchars($$itemid, ENT_QUOTES) . "'" : '').
-        ($$itemprop !== '' ? " itemprop='" . htmlspecialchars($$itemprop, ENT_QUOTES) . "'" : '').
-        ($$itemref !== '' ? " itemref='" . htmlspecialchars($$itemref, ENT_QUOTES) . "'" : '').
-        ($$itemscope !== '' ? " itemscope='" . htmlspecialchars($$itemscope, ENT_QUOTES) . "'" : '').
-        ($$itemtype !== '' ? " itemtype='" . htmlspecialchars($$itemtype, ENT_QUOTES) . "'" : '').
-        ($$lang !== '' ? " lang='" . htmlspecialchars($$lang, ENT_QUOTES) . "'" : '').
-        ($$spellcheck !== '' ? " spellcheck='" . htmlspecialchars($$spellcheck, ENT_QUOTES) . "'" : '').
-        ($$style !== '' ? " style='" . htmlspecialchars($$style, ENT_QUOTES) . "'" : '').
-        ($$tabindex !== '' ? " tabindex='" . htmlspecialchars($$tabindex, ENT_QUOTES) . "'" : '').
-        ($$title !== '' ? " title='" . htmlspecialchars($$title, ENT_QUOTES) . "'" : '').
-        ($$translate !== '' ? " translate='" . htmlspecialchars($$translate, ENT_QUOTES) . "'" : ''). "/>";
+    return "<wbr" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+        ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
+        ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
+        ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
+        ($contextmenu !== '' ? " contextmenu='" . htmlspecialchars($contextmenu, ENT_QUOTES) . "'" : '').
+        ($dir !== '' ? " dir='" . htmlspecialchars($dir, ENT_QUOTES) . "'" : '').
+        ($draggable !== '' ? " draggable='" . htmlspecialchars($draggable, ENT_QUOTES) . "'" : '').
+        ($dropzone !== '' ? " dropzone='" . htmlspecialchars($dropzone, ENT_QUOTES) . "'" : '').
+        ($hidden !== '' ? " hidden='" . htmlspecialchars($hidden, ENT_QUOTES) . "'" : '').
+        ($id !== '' ? " id='" . htmlspecialchars($id, ENT_QUOTES) . "'" : '').
+        ($itemid !== '' ? " itemid='" . htmlspecialchars($itemid, ENT_QUOTES) . "'" : '').
+        ($itemprop !== '' ? " itemprop='" . htmlspecialchars($itemprop, ENT_QUOTES) . "'" : '').
+        ($itemref !== '' ? " itemref='" . htmlspecialchars($itemref, ENT_QUOTES) . "'" : '').
+        ($itemscope !== '' ? " itemscope='" . htmlspecialchars($itemscope, ENT_QUOTES) . "'" : '').
+        ($itemtype !== '' ? " itemtype='" . htmlspecialchars($itemtype, ENT_QUOTES) . "'" : '').
+        ($lang !== '' ? " lang='" . htmlspecialchars($lang, ENT_QUOTES) . "'" : '').
+        ($spellcheck !== '' ? " spellcheck='" . htmlspecialchars($spellcheck, ENT_QUOTES) . "'" : '').
+        ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
+        ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
+        ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
     
 }
 
