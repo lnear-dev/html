@@ -15,6 +15,9 @@
     }
   ],
   "minimum-stability": "stable",
+  "require": {
+    "php": "^8.0"
+  },
   "require-dev": {
     "symfony/console": "^7.1",
     "pestphp/pest": "^2.34"
@@ -23,5 +26,10 @@
     "allow-plugins": {
       "pestphp/pest-plugin": true
     }
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/pest"
+    ]
   }
 }
