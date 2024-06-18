@@ -220,6 +220,18 @@ use html\\div;
 echo div('Hello, World!'); // <div>Hello, World!</div>
 ```
 
+More complex elements can be created by nesting functions.
+```php
+use html\\{div, a, p};
+
+echo div(
+    class: 'container', 
+    body: a('Click me!', href: 'https://example.com', target: '_blank', rel: 'noopener noreferrer') . p('This is a paragraph.')
+);
+
+// <div class="container"><a href="https://example.com" target="_blank" rel="noopener noreferrer">Click me!</a><p>This is a paragraph.</p></div>
+```
+
 # Elements
 
 All elements share the following global attributes:
