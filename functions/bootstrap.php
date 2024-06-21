@@ -31,11 +31,14 @@ function attr(string ...$attributes): string
 {
     $attrs = '';
     foreach ($attributes as $key => $value) {
-        $key   = preg_replace_callback(
-            '/[A-Z]/',
-            fn($match) => '-' . strtolower($match[0]),
-            $key,
+        $key   = htmlspecialchars(
+            preg_replace_callback(
+                '/[A-Z]/',
+                fn($match) => '-' . strtolower($match[0]),
+                $key,
+            ),
         );
+        $value = htmlspecialchars($value);
         $attrs .= " {$key}='{$value}'";
     }
 
@@ -50,11 +53,20 @@ function attr(string ...$attributes): string
  * // Output: <button class="btn" id="submit" type="submit">Submit</button>
  * </code>
  */
-function element(string $tag, string $body, string ...$attributes): string
+function element(string $tag, string|RenderResult|array $body, string ...$attributes): RenderResult
 {
-    $attrs = attr(...$attributes);
-
-    return "<{$tag}{$attrs}>{$body}</{$tag}>";
+    $attrs          = attr(...$attributes);
+    $content        = is_array($body) ? $body : [$body];
+    $escapedContent = [];
+    foreach ($content as $chunk) {
+        if (is_string($chunk)) {
+            $escapedContent[] = htmlentities($chunk);
+        } else {
+            $escapedContent[] = $chunk;
+        }
+    }
+    $escapedContent[] = "</{$tag}>";
+    return RenderResult::encoded("<{$tag}{$attrs}>", ...$escapedContent);
 }
 
 /**
@@ -65,9 +77,9 @@ function element(string $tag, string $body, string ...$attributes): string
  * // Output: <img src="image.jpg" alt="Image" />
  * </code>
  */
-function selfClosingElement(string $tag, string ...$attributes): string
+function selfClosingElement(string $tag, string ...$attributes): RenderResult
 {
     $attrs = attr(...$attributes);
 
-    return "<{$tag}{$attrs}/>";
+    return RenderResult::encoded("<{$tag}{$attrs}/>");
 }

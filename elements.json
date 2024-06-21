@@ -607,8 +607,7 @@
             "shadowrootdelegatesfocus",
             "shadowrootclonable",
             "shadowrootserializable"
-        ],
-        "selfClosing": true
+        ]
     },
     {
         "tag": "textarea",

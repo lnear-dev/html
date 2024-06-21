@@ -4,8 +4,13 @@
   "type": "library",
   "license": "MIT",
   "autoload": {
+    "psr-4": {
+      "html\\": "src/"
+    },
     "files": [
-      "src/index.php"
+      "functions/bootstrap.php",
+      "functions/elements.php",
+      "functions/strict.php"
     ]
   },
   "authors": [
@@ -29,7 +34,7 @@
   },
   "scripts": {
     "test": [
-      "vendor/bin/pest"
+      "vendor/bin/pest --coverage-clover 'reports/clover.xml'  --min=99"
     ]
   }
 }

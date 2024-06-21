@@ -6,9 +6,12 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\SingleCommandApplication;
 
-const kSpec             = 'https://html.spec.whatwg.org/multipage/indices.html';
-const kJSONOutFile      = __DIR__ . '/src/elements.json';
-const kPHPOutFile       = __DIR__ . '/src/elements.php';
+const kSpec          = 'https://html.spec.whatwg.org/multipage/indices.html';
+const kJSONOutFile   = __DIR__ . '/elements.json';
+const kPHPOutFile    = __DIR__ . '/functions/elements.php';
+const kStrictOutFile = __DIR__ . '/functions/strict.php';
+define('kReadmeStub', file_get_contents(__DIR__ . '/README.md.stub'));
+const kReadmeFile       = __DIR__ . '/README.md';
 const kGlobalAttributes = [
     'accesskey',
     'autocapitalize',
@@ -62,7 +65,7 @@ class Bin
                 }
             }
             $children    = $xpath->query('td[4]', $element)->item(0)->textContent;
-            $selfClosing = strpos($children, 'empty') !== false;
+            $selfClosing = strpos($children, 'empty') !== false && $tag !== 'template';
             $e           = [
                 "tag" => $tag,
                 // "attributes"  => $attributes,
@@ -89,14 +92,35 @@ class Bin
         int $level = 1,
     ): string {
         $fname = $tag;
-
-        // "var" is a reserved keyword in PHP 
         if ($tag === 'var') {
             $fname = 'variable';
         }
-        $args = $attributes;
+        $params = "string ...\$attributes";
+        $body   = "return selfClosingElement('{$tag}', ...\$attributes);";
         if (!$selfClosing) {
-            array_unshift($args, 'body');
+            $params = "string|array|RenderResult \$body, {$params}";
+            $body   = "return element('{$tag}', \$body, ...\$attributes);";
+        }
+        [$params, $body] = self::indent($level, $params, $body);
+        return "function {$fname}(\n{$params}\n): RenderResult {\n{$body}\n}";
+
+    }
+    static function generateStrictElementCode(
+        ?string $tag,
+        array $attributes,
+        bool $selfClosing,
+        int $level = 1,
+    ): string {
+        $fname = $tag;
+        if ($tag === 'var') {
+            $fname = 'variable';
+        }
+        $args = array_map(
+            fn($attr) => "string " . self::camelArg($attr) . '= ""',
+            $attributes,
+        );
+        if (!$selfClosing) {
+            array_unshift($args, 'string|array|RenderResult $body');
         }
 
         $attributes_impl = join(
@@ -104,7 +128,10 @@ class Bin
             array_map(
                 function ($attr) use ($level) {
                     $arg = self::camelArg($attr);
-                    return self::indent("({$arg} !== '' ? \" {$attr}='\" . htmlspecialchars({$arg}, ENT_QUOTES) . \"'\" : '')", $level);
+                    return self::indent(
+                        $level,
+                        "({$arg} !== '' ? \" {$attr}='\" . htmlspecialchars({$arg}, ENT_QUOTES) . \"'\" : '')",
+                    );
                 },
                 $attributes,
             ),
@@ -112,42 +139,36 @@ class Bin
 
         $attributes_impl = $attributes_impl ? $attributes_impl . '.' : '';
         $params          = self::indent(
-            join(
-                ",\n",
-                array_map(
-                    fn($attr) => "string " . self::camelArg($attr) . '= ""',
-                    $args,
-                ),
-            ),
             $level,
+            join(",\n", $args),
         );
 
         $body = self::indent(
-            "return \"<{$tag}\" . {$attributes_impl} " . ($selfClosing ? '"/>"' : "\">{\$body}</{$tag}>\"") . ";\n",
             $level,
+            "return RenderResult::encoded(\"<{$tag}\" . {$attributes_impl} " . ($selfClosing ? '"/>"' : "\">{\$body}</{$tag}>\"") . ");\n",
         );
 
-        return "function {$fname}(\n{$params}\n) {\n{$body}\n}";
+        return "function {$fname}(\n{$params}\n): RenderResult {\n{$body}\n}";
     }
 
     static function lint(): void
     {
         passthru("php -l " . kPHPOutFile);
+        passthru("php -l " . kStrictOutFile);
+
         passthru("php-cs-fixer fix --config .php-cs-fixer.php");
     }
 
     static function generate(array $elements): void
     {
-        // Reset the file
         file_put_contents(kPHPOutFile, '');
-
         $file = fopen(kPHPOutFile, 'w');
+
         if ($file === false) {
             die("Failed to open PHP file for writing.");
         }
 
         fwrite($file, "<?php\n\nnamespace html;\n\n");
-
         foreach ($elements as $element) {
             $tag         = $element['tag'];
             $attributes  = array_merge($element['attributes'] ?? [], kGlobalAttributes);
@@ -156,19 +177,48 @@ class Bin
         }
 
         fclose($file);
-        self::lint();
+
+        self::generateStrict($elements);
         self::generateReadme($elements);
+        self::lint();
+
+    }
+    static function generateStrict(array $elements): void
+    {
+        file_put_contents(kStrictOutFile, '');
+        $file = fopen(kStrictOutFile, 'w');
+        if ($file === false) {
+            die("Failed to open strict PHP file for writing.");
+        }
+
+
+        fwrite($file, "<?php\n\nnamespace html\\strict;\n\nuse html\\RenderResult;\n\n");
+
+        foreach ($elements as $element) {
+            $tag         = $element['tag'];
+            $attributes  = array_merge($element['attributes'] ?? [], kGlobalAttributes);
+            $selfClosing = $element['selfClosing'] ?? false;
+            fwrite($file, self::generateStrictElementCode($tag, $attributes, $selfClosing) . "\n\n");
+        }
+
+        fclose($file);
+
     }
 
-    static function indent(string $string, int $level = 1): string
+    static function indent(int $level, string ...$strings): string|array
     {
-        return join(
-            "\n",
-            array_map(
-                fn($line) => str_repeat('    ', $level) . $line,
-                explode("\n", $string),
-            ),
-        );
+        $o = [];
+        foreach ($strings as $string) {
+            $o[] = join(
+                "\n",
+                array_map(
+                    fn($line) => str_repeat('    ', $level) . $line,
+                    explode("\n", $string),
+                ),
+            );
+        }
+        return count($o) === 1 ? $o[0] : $o;
+
     }
 
     static function generateReadme(array $elements)
@@ -183,76 +233,12 @@ class Bin
         $noAtt            = join("\n", array_map(fn($element) => "| `{$element['tag']}` |", $noAtt));
         $elements         = join("\n", array_map(fn($element) => "| `{$element['tag']}` | " . join(', ', $element['attributes']) . " |", $elements));
 
-        $contents = <<<MARKDOWN
-# lnear/html, a PHP library for generating HTML elements
+        $vars     = compact('globalAttributes', 'noAtt', 'elements');
+        $contents = kReadmeStub;
+        foreach ($vars as $key => $value) {
+            $contents = str_replace("{\${$key}}", $value, $contents);
+        }
 
-This is a list of HTML elements and their attributes generated from the [HTML Living Standard](https://html.spec.whatwg.org/multipage/indices.html).
-
-# Installation
-
-```bash
-composer require lnear/html
-```
-
-# Usage
-
-```php
-use html\\a;
-
-echo a(href: 'https://example.com', target: '_blank', rel: 'noopener noreferrer'); // <a href="https://example.com" target="_blank" rel="noopener noreferrer"></a>
-```
-
-All functions return a string of the HTML element that it is named after. The only exception is the `var` function, which is named `variable` to avoid conflicts with the reserved keyword `var`.
-
-The `body` argument is present in all non-self-closing elements. It is used to add text or other elements inside the element.
-
-```php
-use html\\div;
-
-echo div(body: 'Hello, World!'); // <div>Hello, World!</div>
-```
-
-It is also the first argument in those functions, so you can omit the argument name.
-
-```php
-use html\\div;
-
-echo div('Hello, World!'); // <div>Hello, World!</div>
-```
-
-More complex elements can be created by nesting functions.
-```php
-use html\\{div, a, p};
-
-echo div(
-    class: 'container', 
-    body: a('Click me!', href: 'https://example.com', target: '_blank', rel: 'noopener noreferrer') . p('This is a paragraph.')
-);
-
-// <div class="container"><a href="https://example.com" target="_blank" rel="noopener noreferrer">Click me!</a><p>This is a paragraph.</p></div>
-```
-
-# Elements
-
-All elements share the following global attributes:
-
-| Attribute |
-| --------- |
-{$globalAttributes}
-
-The following elements only have the global attributes:
-
-| Tag |
-| --- |
-{$noAtt}
-
-The following elements have additional attributes:
-
-| Tag | Attributes |
-| --- | ---------- |
-{$elements}
-
-MARKDOWN;
         fwrite($readme, $contents);
         fclose($readme);
     }

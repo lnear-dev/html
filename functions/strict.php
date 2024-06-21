@@ -17,10 +17,12 @@
  * @link     https://lnear.dev
  * @contact  hi@lnear.dev
  */
-namespace html;
+namespace html\strict;
+
+use html\RenderResult;
 
 function a(
-    string $body= "",
+    string|array|RenderResult $body,
     string $href= "",
     string $target= "",
     string $download= "",
@@ -50,8 +52,8 @@ function a(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<a" .     ($href !== '' ? " href='" . htmlspecialchars($href, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<a" .     ($href !== '' ? " href='" . htmlspecialchars($href, ENT_QUOTES) . "'" : '').
         ($target !== '' ? " target='" . htmlspecialchars($target, ENT_QUOTES) . "'" : '').
         ($download !== '' ? " download='" . htmlspecialchars($download, ENT_QUOTES) . "'" : '').
         ($ping !== '' ? " ping='" . htmlspecialchars($ping, ENT_QUOTES) . "'" : '').
@@ -79,12 +81,12 @@ function a(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</a>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</a>");
     
 }
 
 function abbr(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -106,8 +108,8 @@ function abbr(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<abbr" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<abbr" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -127,12 +129,12 @@ function abbr(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</abbr>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</abbr>");
     
 }
 
 function address(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -154,8 +156,8 @@ function address(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<address" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<address" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -175,7 +177,7 @@ function address(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</address>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</address>");
     
 }
 
@@ -210,8 +212,8 @@ function area(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<area" .     ($alt !== '' ? " alt='" . htmlspecialchars($alt, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<area" .     ($alt !== '' ? " alt='" . htmlspecialchars($alt, ENT_QUOTES) . "'" : '').
         ($coords !== '' ? " coords='" . htmlspecialchars($coords, ENT_QUOTES) . "'" : '').
         ($shape !== '' ? " shape='" . htmlspecialchars($shape, ENT_QUOTES) . "'" : '').
         ($href !== '' ? " href='" . htmlspecialchars($href, ENT_QUOTES) . "'" : '').
@@ -240,12 +242,12 @@ function area(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 
 function article(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -267,8 +269,8 @@ function article(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<article" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<article" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -288,12 +290,12 @@ function article(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</article>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</article>");
     
 }
 
 function aside(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -315,8 +317,8 @@ function aside(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<aside" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<aside" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -336,12 +338,12 @@ function aside(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</aside>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</aside>");
     
 }
 
 function audio(
-    string $body= "",
+    string|array|RenderResult $body,
     string $src= "",
     string $crossorigin= "",
     string $preload= "",
@@ -370,8 +372,8 @@ function audio(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<audio" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<audio" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
         ($crossorigin !== '' ? " crossorigin='" . htmlspecialchars($crossorigin, ENT_QUOTES) . "'" : '').
         ($preload !== '' ? " preload='" . htmlspecialchars($preload, ENT_QUOTES) . "'" : '').
         ($autoplay !== '' ? " autoplay='" . htmlspecialchars($autoplay, ENT_QUOTES) . "'" : '').
@@ -398,12 +400,12 @@ function audio(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</audio>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</audio>");
     
 }
 
 function b(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -425,8 +427,8 @@ function b(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<b" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<b" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -446,7 +448,7 @@ function b(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</b>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</b>");
     
 }
 
@@ -474,8 +476,8 @@ function base(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<base" .     ($href !== '' ? " href='" . htmlspecialchars($href, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<base" .     ($href !== '' ? " href='" . htmlspecialchars($href, ENT_QUOTES) . "'" : '').
         ($target !== '' ? " target='" . htmlspecialchars($target, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
@@ -497,12 +499,12 @@ function base(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 
 function bdi(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -524,8 +526,8 @@ function bdi(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<bdi" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<bdi" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -545,12 +547,12 @@ function bdi(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</bdi>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</bdi>");
     
 }
 
 function bdo(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -572,8 +574,8 @@ function bdo(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<bdo" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<bdo" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -593,12 +595,12 @@ function bdo(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</bdo>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</bdo>");
     
 }
 
 function blockquote(
-    string $body= "",
+    string|array|RenderResult $body,
     string $cite= "",
     string $accesskey= "",
     string $autocapitalize= "",
@@ -621,8 +623,8 @@ function blockquote(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<blockquote" .     ($cite !== '' ? " cite='" . htmlspecialchars($cite, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<blockquote" .     ($cite !== '' ? " cite='" . htmlspecialchars($cite, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
@@ -643,12 +645,12 @@ function blockquote(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</blockquote>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</blockquote>");
     
 }
 
 function body(
-    string $body= "",
+    string|array|RenderResult $body,
     string $onafterprint= "",
     string $onbeforeprint= "",
     string $onbeforeunload= "",
@@ -688,8 +690,8 @@ function body(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<body" .     ($onafterprint !== '' ? " onafterprint='" . htmlspecialchars($onafterprint, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<body" .     ($onafterprint !== '' ? " onafterprint='" . htmlspecialchars($onafterprint, ENT_QUOTES) . "'" : '').
         ($onbeforeprint !== '' ? " onbeforeprint='" . htmlspecialchars($onbeforeprint, ENT_QUOTES) . "'" : '').
         ($onbeforeunload !== '' ? " onbeforeunload='" . htmlspecialchars($onbeforeunload, ENT_QUOTES) . "'" : '').
         ($onhashchange !== '' ? " onhashchange='" . htmlspecialchars($onhashchange, ENT_QUOTES) . "'" : '').
@@ -727,7 +729,7 @@ function body(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</body>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</body>");
     
 }
 
@@ -753,8 +755,8 @@ function br(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<br" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<br" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -774,12 +776,12 @@ function br(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 
 function button(
-    string $body= "",
+    string|array|RenderResult $body,
     string $disabled= "",
     string $form= "",
     string $formaction= "",
@@ -813,8 +815,8 @@ function button(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<button" .     ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<button" .     ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
         ($form !== '' ? " form='" . htmlspecialchars($form, ENT_QUOTES) . "'" : '').
         ($formaction !== '' ? " formaction='" . htmlspecialchars($formaction, ENT_QUOTES) . "'" : '').
         ($formenctype !== '' ? " formenctype='" . htmlspecialchars($formenctype, ENT_QUOTES) . "'" : '').
@@ -846,12 +848,12 @@ function button(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</button>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</button>");
     
 }
 
 function canvas(
-    string $body= "",
+    string|array|RenderResult $body,
     string $width= "",
     string $height= "",
     string $accesskey= "",
@@ -875,8 +877,8 @@ function canvas(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<canvas" .     ($width !== '' ? " width='" . htmlspecialchars($width, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<canvas" .     ($width !== '' ? " width='" . htmlspecialchars($width, ENT_QUOTES) . "'" : '').
         ($height !== '' ? " height='" . htmlspecialchars($height, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
@@ -898,12 +900,12 @@ function canvas(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</canvas>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</canvas>");
     
 }
 
 function caption(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -925,8 +927,8 @@ function caption(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<caption" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<caption" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -946,12 +948,12 @@ function caption(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</caption>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</caption>");
     
 }
 
 function cite(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -973,8 +975,8 @@ function cite(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<cite" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<cite" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -994,12 +996,12 @@ function cite(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</cite>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</cite>");
     
 }
 
 function code(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -1021,8 +1023,8 @@ function code(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<code" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<code" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -1042,7 +1044,7 @@ function code(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</code>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</code>");
     
 }
 
@@ -1069,8 +1071,8 @@ function col(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<col" .     ($span !== '' ? " span='" . htmlspecialchars($span, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<col" .     ($span !== '' ? " span='" . htmlspecialchars($span, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
@@ -1091,12 +1093,12 @@ function col(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 
 function colgroup(
-    string $body= "",
+    string|array|RenderResult $body,
     string $span= "",
     string $accesskey= "",
     string $autocapitalize= "",
@@ -1119,8 +1121,8 @@ function colgroup(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<colgroup" .     ($span !== '' ? " span='" . htmlspecialchars($span, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<colgroup" .     ($span !== '' ? " span='" . htmlspecialchars($span, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
@@ -1141,12 +1143,12 @@ function colgroup(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</colgroup>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</colgroup>");
     
 }
 
 function data(
-    string $body= "",
+    string|array|RenderResult $body,
     string $value= "",
     string $accesskey= "",
     string $autocapitalize= "",
@@ -1169,8 +1171,8 @@ function data(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<data" .     ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<data" .     ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
@@ -1191,12 +1193,12 @@ function data(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</data>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</data>");
     
 }
 
 function datalist(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -1218,8 +1220,8 @@ function datalist(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<datalist" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<datalist" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -1239,12 +1241,12 @@ function datalist(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</datalist>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</datalist>");
     
 }
 
 function dd(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -1266,8 +1268,8 @@ function dd(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<dd" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<dd" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -1287,12 +1289,12 @@ function dd(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dd>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dd>");
     
 }
 
 function del(
-    string $body= "",
+    string|array|RenderResult $body,
     string $cite= "",
     string $datetime= "",
     string $accesskey= "",
@@ -1316,8 +1318,8 @@ function del(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<del" .     ($cite !== '' ? " cite='" . htmlspecialchars($cite, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<del" .     ($cite !== '' ? " cite='" . htmlspecialchars($cite, ENT_QUOTES) . "'" : '').
         ($datetime !== '' ? " datetime='" . htmlspecialchars($datetime, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
@@ -1339,12 +1341,12 @@ function del(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</del>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</del>");
     
 }
 
 function details(
-    string $body= "",
+    string|array|RenderResult $body,
     string $name= "",
     string $open= "",
     string $accesskey= "",
@@ -1368,8 +1370,8 @@ function details(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<details" .     ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<details" .     ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
         ($open !== '' ? " open='" . htmlspecialchars($open, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
@@ -1391,12 +1393,12 @@ function details(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</details>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</details>");
     
 }
 
 function dfn(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -1418,8 +1420,8 @@ function dfn(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<dfn" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<dfn" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -1439,12 +1441,12 @@ function dfn(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dfn>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dfn>");
     
 }
 
 function dialog(
-    string $body= "",
+    string|array|RenderResult $body,
     string $open= "",
     string $accesskey= "",
     string $autocapitalize= "",
@@ -1467,8 +1469,8 @@ function dialog(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<dialog" .     ($open !== '' ? " open='" . htmlspecialchars($open, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<dialog" .     ($open !== '' ? " open='" . htmlspecialchars($open, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
@@ -1489,12 +1491,12 @@ function dialog(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dialog>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dialog>");
     
 }
 
 function div(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -1516,8 +1518,8 @@ function div(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<div" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<div" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -1537,12 +1539,12 @@ function div(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</div>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</div>");
     
 }
 
 function dl(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -1564,8 +1566,8 @@ function dl(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<dl" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<dl" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -1585,12 +1587,12 @@ function dl(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dl>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dl>");
     
 }
 
 function dt(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -1612,8 +1614,8 @@ function dt(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<dt" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<dt" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -1633,12 +1635,12 @@ function dt(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dt>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</dt>");
     
 }
 
 function em(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -1660,8 +1662,8 @@ function em(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<em" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<em" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -1681,7 +1683,7 @@ function em(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</em>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</em>");
     
 }
 
@@ -1711,8 +1713,8 @@ function embed(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<embed" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<embed" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
         ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
         ($width !== '' ? " width='" . htmlspecialchars($width, ENT_QUOTES) . "'" : '').
         ($height !== '' ? " height='" . htmlspecialchars($height, ENT_QUOTES) . "'" : '').
@@ -1736,12 +1738,12 @@ function embed(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 
 function fieldset(
-    string $body= "",
+    string|array|RenderResult $body,
     string $disabled= "",
     string $form= "",
     string $name= "",
@@ -1766,8 +1768,8 @@ function fieldset(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<fieldset" .     ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<fieldset" .     ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
         ($form !== '' ? " form='" . htmlspecialchars($form, ENT_QUOTES) . "'" : '').
         ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
@@ -1790,12 +1792,12 @@ function fieldset(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</fieldset>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</fieldset>");
     
 }
 
 function figcaption(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -1817,8 +1819,8 @@ function figcaption(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<figcaption" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<figcaption" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -1838,12 +1840,12 @@ function figcaption(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</figcaption>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</figcaption>");
     
 }
 
 function figure(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -1865,8 +1867,8 @@ function figure(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<figure" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<figure" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -1886,12 +1888,12 @@ function figure(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</figure>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</figure>");
     
 }
 
 function footer(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -1913,8 +1915,8 @@ function footer(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<footer" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<footer" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -1934,12 +1936,12 @@ function footer(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</footer>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</footer>");
     
 }
 
 function form(
-    string $body= "",
+    string|array|RenderResult $body,
     string $acceptCharset= "",
     string $action= "",
     string $autocomplete= "",
@@ -1970,8 +1972,8 @@ function form(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<form" .     ($acceptCharset !== '' ? " accept-charset='" . htmlspecialchars($acceptCharset, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<form" .     ($acceptCharset !== '' ? " accept-charset='" . htmlspecialchars($acceptCharset, ENT_QUOTES) . "'" : '').
         ($action !== '' ? " action='" . htmlspecialchars($action, ENT_QUOTES) . "'" : '').
         ($autocomplete !== '' ? " autocomplete='" . htmlspecialchars($autocomplete, ENT_QUOTES) . "'" : '').
         ($enctype !== '' ? " enctype='" . htmlspecialchars($enctype, ENT_QUOTES) . "'" : '').
@@ -2000,12 +2002,12 @@ function form(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</form>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</form>");
     
 }
 
 function h1(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -2027,8 +2029,8 @@ function h1(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<h1" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<h1" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -2048,12 +2050,12 @@ function h1(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</h1>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</h1>");
     
 }
 
 function head(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -2075,8 +2077,8 @@ function head(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<head" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<head" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -2096,12 +2098,12 @@ function head(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</head>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</head>");
     
 }
 
 function header(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -2123,8 +2125,8 @@ function header(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<header" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<header" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -2144,12 +2146,12 @@ function header(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</header>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</header>");
     
 }
 
 function hgroup(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -2171,8 +2173,8 @@ function hgroup(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<hgroup" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<hgroup" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -2192,7 +2194,7 @@ function hgroup(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</hgroup>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</hgroup>");
     
 }
 
@@ -2218,8 +2220,8 @@ function hr(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<hr" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<hr" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -2239,12 +2241,12 @@ function hr(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 
 function html(
-    string $body= "",
+    string|array|RenderResult $body,
     string $manifest= "",
     string $accesskey= "",
     string $autocapitalize= "",
@@ -2267,8 +2269,8 @@ function html(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<html" .     ($manifest !== '' ? " manifest='" . htmlspecialchars($manifest, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<html" .     ($manifest !== '' ? " manifest='" . htmlspecialchars($manifest, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
@@ -2289,12 +2291,12 @@ function html(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</html>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</html>");
     
 }
 
 function i(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -2316,8 +2318,8 @@ function i(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<i" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<i" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -2337,7 +2339,7 @@ function i(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</i>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</i>");
     
 }
 
@@ -2373,8 +2375,8 @@ function iframe(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<iframe" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<iframe" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
         ($srcdoc !== '' ? " srcdoc='" . htmlspecialchars($srcdoc, ENT_QUOTES) . "'" : '').
         ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
         ($sandbox !== '' ? " sandbox='" . htmlspecialchars($sandbox, ENT_QUOTES) . "'" : '').
@@ -2404,7 +2406,7 @@ function iframe(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 
@@ -2443,8 +2445,8 @@ function img(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<img" .     ($alt !== '' ? " alt='" . htmlspecialchars($alt, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<img" .     ($alt !== '' ? " alt='" . htmlspecialchars($alt, ENT_QUOTES) . "'" : '').
         ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
         ($srcset !== '' ? " srcset='" . htmlspecialchars($srcset, ENT_QUOTES) . "'" : '').
         ($sizes !== '' ? " sizes='" . htmlspecialchars($sizes, ENT_QUOTES) . "'" : '').
@@ -2477,7 +2479,7 @@ function img(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 
@@ -2535,8 +2537,8 @@ function input(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<input" .     ($accept !== '' ? " accept='" . htmlspecialchars($accept, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<input" .     ($accept !== '' ? " accept='" . htmlspecialchars($accept, ENT_QUOTES) . "'" : '').
         ($alt !== '' ? " alt='" . htmlspecialchars($alt, ENT_QUOTES) . "'" : '').
         ($autocomplete !== '' ? " autocomplete='" . htmlspecialchars($autocomplete, ENT_QUOTES) . "'" : '').
         ($checked !== '' ? " checked='" . htmlspecialchars($checked, ENT_QUOTES) . "'" : '').
@@ -2588,12 +2590,12 @@ function input(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 
 function ins(
-    string $body= "",
+    string|array|RenderResult $body,
     string $cite= "",
     string $datetime= "",
     string $accesskey= "",
@@ -2617,8 +2619,8 @@ function ins(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<ins" .     ($cite !== '' ? " cite='" . htmlspecialchars($cite, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<ins" .     ($cite !== '' ? " cite='" . htmlspecialchars($cite, ENT_QUOTES) . "'" : '').
         ($datetime !== '' ? " datetime='" . htmlspecialchars($datetime, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
@@ -2640,12 +2642,12 @@ function ins(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</ins>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</ins>");
     
 }
 
 function kbd(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -2667,8 +2669,8 @@ function kbd(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<kbd" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<kbd" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -2688,12 +2690,12 @@ function kbd(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</kbd>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</kbd>");
     
 }
 
 function label(
-    string $body= "",
+    string|array|RenderResult $body,
     string $for= "",
     string $accesskey= "",
     string $autocapitalize= "",
@@ -2716,8 +2718,8 @@ function label(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<label" .     ($for !== '' ? " for='" . htmlspecialchars($for, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<label" .     ($for !== '' ? " for='" . htmlspecialchars($for, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
@@ -2738,12 +2740,12 @@ function label(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</label>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</label>");
     
 }
 
 function legend(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -2765,8 +2767,8 @@ function legend(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<legend" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<legend" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -2786,12 +2788,12 @@ function legend(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</legend>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</legend>");
     
 }
 
 function li(
-    string $body= "",
+    string|array|RenderResult $body,
     string $value= "",
     string $accesskey= "",
     string $autocapitalize= "",
@@ -2814,8 +2816,8 @@ function li(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<li" .     ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<li" .     ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
@@ -2836,7 +2838,7 @@ function li(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</li>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</li>");
     
 }
 
@@ -2878,8 +2880,8 @@ function link(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<link" .     ($href !== '' ? " href='" . htmlspecialchars($href, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<link" .     ($href !== '' ? " href='" . htmlspecialchars($href, ENT_QUOTES) . "'" : '').
         ($crossorigin !== '' ? " crossorigin='" . htmlspecialchars($crossorigin, ENT_QUOTES) . "'" : '').
         ($rel !== '' ? " rel='" . htmlspecialchars($rel, ENT_QUOTES) . "'" : '').
         ($as !== '' ? " as='" . htmlspecialchars($as, ENT_QUOTES) . "'" : '').
@@ -2915,12 +2917,12 @@ function link(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 
 function main(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -2942,8 +2944,8 @@ function main(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<main" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<main" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -2963,12 +2965,12 @@ function main(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</main>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</main>");
     
 }
 
 function map(
-    string $body= "",
+    string|array|RenderResult $body,
     string $name= "",
     string $accesskey= "",
     string $autocapitalize= "",
@@ -2991,8 +2993,8 @@ function map(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<map" .     ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<map" .     ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
@@ -3013,12 +3015,12 @@ function map(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</map>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</map>");
     
 }
 
 function mark(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -3040,8 +3042,8 @@ function mark(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<mark" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<mark" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -3061,12 +3063,12 @@ function mark(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</mark>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</mark>");
     
 }
 
 function math(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -3088,8 +3090,8 @@ function math(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<math" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<math" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -3109,12 +3111,12 @@ function math(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</math>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</math>");
     
 }
 
 function menu(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -3136,8 +3138,8 @@ function menu(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<menu" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<menu" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -3157,7 +3159,7 @@ function menu(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</menu>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</menu>");
     
 }
 
@@ -3188,8 +3190,8 @@ function meta(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<meta" .     ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<meta" .     ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
         ($httpEquiv !== '' ? " http-equiv='" . htmlspecialchars($httpEquiv, ENT_QUOTES) . "'" : '').
         ($content !== '' ? " content='" . htmlspecialchars($content, ENT_QUOTES) . "'" : '').
         ($charset !== '' ? " charset='" . htmlspecialchars($charset, ENT_QUOTES) . "'" : '').
@@ -3214,12 +3216,12 @@ function meta(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 
 function meter(
-    string $body= "",
+    string|array|RenderResult $body,
     string $value= "",
     string $min= "",
     string $max= "",
@@ -3247,8 +3249,8 @@ function meter(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<meter" .     ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<meter" .     ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
         ($min !== '' ? " min='" . htmlspecialchars($min, ENT_QUOTES) . "'" : '').
         ($max !== '' ? " max='" . htmlspecialchars($max, ENT_QUOTES) . "'" : '').
         ($low !== '' ? " low='" . htmlspecialchars($low, ENT_QUOTES) . "'" : '').
@@ -3274,12 +3276,12 @@ function meter(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</meter>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</meter>");
     
 }
 
 function nav(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -3301,8 +3303,8 @@ function nav(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<nav" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<nav" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -3322,12 +3324,12 @@ function nav(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</nav>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</nav>");
     
 }
 
 function noscript(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -3349,8 +3351,8 @@ function noscript(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<noscript" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<noscript" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -3370,12 +3372,12 @@ function noscript(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</noscript>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</noscript>");
     
 }
 
 function object(
-    string $body= "",
+    string|array|RenderResult $body,
     string $data= "",
     string $type= "",
     string $name= "",
@@ -3403,8 +3405,8 @@ function object(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<object" .     ($data !== '' ? " data='" . htmlspecialchars($data, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<object" .     ($data !== '' ? " data='" . htmlspecialchars($data, ENT_QUOTES) . "'" : '').
         ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
         ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
         ($form !== '' ? " form='" . htmlspecialchars($form, ENT_QUOTES) . "'" : '').
@@ -3430,12 +3432,12 @@ function object(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</object>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</object>");
     
 }
 
 function ol(
-    string $body= "",
+    string|array|RenderResult $body,
     string $reversed= "",
     string $start= "",
     string $type= "",
@@ -3460,8 +3462,8 @@ function ol(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<ol" .     ($reversed !== '' ? " reversed='" . htmlspecialchars($reversed, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<ol" .     ($reversed !== '' ? " reversed='" . htmlspecialchars($reversed, ENT_QUOTES) . "'" : '').
         ($start !== '' ? " start='" . htmlspecialchars($start, ENT_QUOTES) . "'" : '').
         ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
@@ -3484,12 +3486,12 @@ function ol(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</ol>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</ol>");
     
 }
 
 function optgroup(
-    string $body= "",
+    string|array|RenderResult $body,
     string $disabled= "",
     string $label= "",
     string $accesskey= "",
@@ -3513,8 +3515,8 @@ function optgroup(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<optgroup" .     ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<optgroup" .     ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
         ($label !== '' ? " label='" . htmlspecialchars($label, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
@@ -3536,12 +3538,12 @@ function optgroup(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</optgroup>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</optgroup>");
     
 }
 
 function option(
-    string $body= "",
+    string|array|RenderResult $body,
     string $disabled= "",
     string $label= "",
     string $selected= "",
@@ -3567,8 +3569,8 @@ function option(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<option" .     ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<option" .     ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
         ($label !== '' ? " label='" . htmlspecialchars($label, ENT_QUOTES) . "'" : '').
         ($selected !== '' ? " selected='" . htmlspecialchars($selected, ENT_QUOTES) . "'" : '').
         ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
@@ -3592,12 +3594,12 @@ function option(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</option>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</option>");
     
 }
 
 function output(
-    string $body= "",
+    string|array|RenderResult $body,
     string $for= "",
     string $form= "",
     string $name= "",
@@ -3622,8 +3624,8 @@ function output(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<output" .     ($for !== '' ? " for='" . htmlspecialchars($for, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<output" .     ($for !== '' ? " for='" . htmlspecialchars($for, ENT_QUOTES) . "'" : '').
         ($form !== '' ? " form='" . htmlspecialchars($form, ENT_QUOTES) . "'" : '').
         ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
@@ -3646,12 +3648,12 @@ function output(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</output>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</output>");
     
 }
 
 function p(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -3673,8 +3675,8 @@ function p(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<p" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<p" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -3694,12 +3696,12 @@ function p(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</p>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</p>");
     
 }
 
 function picture(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -3721,8 +3723,8 @@ function picture(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<picture" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<picture" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -3742,12 +3744,12 @@ function picture(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</picture>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</picture>");
     
 }
 
 function pre(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -3769,8 +3771,8 @@ function pre(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<pre" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<pre" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -3790,12 +3792,12 @@ function pre(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</pre>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</pre>");
     
 }
 
 function progress(
-    string $body= "",
+    string|array|RenderResult $body,
     string $value= "",
     string $max= "",
     string $accesskey= "",
@@ -3819,8 +3821,8 @@ function progress(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<progress" .     ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<progress" .     ($value !== '' ? " value='" . htmlspecialchars($value, ENT_QUOTES) . "'" : '').
         ($max !== '' ? " max='" . htmlspecialchars($max, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
@@ -3842,12 +3844,12 @@ function progress(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</progress>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</progress>");
     
 }
 
 function q(
-    string $body= "",
+    string|array|RenderResult $body,
     string $cite= "",
     string $accesskey= "",
     string $autocapitalize= "",
@@ -3870,8 +3872,8 @@ function q(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<q" .     ($cite !== '' ? " cite='" . htmlspecialchars($cite, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<q" .     ($cite !== '' ? " cite='" . htmlspecialchars($cite, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
@@ -3892,12 +3894,12 @@ function q(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</q>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</q>");
     
 }
 
 function rp(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -3919,8 +3921,8 @@ function rp(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<rp" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<rp" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -3940,12 +3942,12 @@ function rp(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</rp>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</rp>");
     
 }
 
 function rt(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -3967,8 +3969,8 @@ function rt(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<rt" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<rt" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -3988,12 +3990,12 @@ function rt(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</rt>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</rt>");
     
 }
 
 function ruby(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4015,8 +4017,8 @@ function ruby(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<ruby" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<ruby" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4036,12 +4038,12 @@ function ruby(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</ruby>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</ruby>");
     
 }
 
 function s(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4063,8 +4065,8 @@ function s(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<s" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<s" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4084,12 +4086,12 @@ function s(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</s>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</s>");
     
 }
 
 function samp(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4111,8 +4113,8 @@ function samp(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<samp" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<samp" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4132,12 +4134,12 @@ function samp(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</samp>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</samp>");
     
 }
 
 function script(
-    string $body= "",
+    string|array|RenderResult $body,
     string $src= "",
     string $type= "",
     string $nomodule= "",
@@ -4169,8 +4171,8 @@ function script(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<script" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<script" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
         ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
         ($nomodule !== '' ? " nomodule='" . htmlspecialchars($nomodule, ENT_QUOTES) . "'" : '').
         ($async !== '' ? " async='" . htmlspecialchars($async, ENT_QUOTES) . "'" : '').
@@ -4200,12 +4202,12 @@ function script(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</script>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</script>");
     
 }
 
 function search(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4227,8 +4229,8 @@ function search(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<search" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<search" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4248,12 +4250,12 @@ function search(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</search>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</search>");
     
 }
 
 function section(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4275,8 +4277,8 @@ function section(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<section" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<section" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4296,12 +4298,12 @@ function section(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</section>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</section>");
     
 }
 
 function select(
-    string $body= "",
+    string|array|RenderResult $body,
     string $autocomplete= "",
     string $disabled= "",
     string $form= "",
@@ -4330,8 +4332,8 @@ function select(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<select" .     ($autocomplete !== '' ? " autocomplete='" . htmlspecialchars($autocomplete, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<select" .     ($autocomplete !== '' ? " autocomplete='" . htmlspecialchars($autocomplete, ENT_QUOTES) . "'" : '').
         ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
         ($form !== '' ? " form='" . htmlspecialchars($form, ENT_QUOTES) . "'" : '').
         ($multiple !== '' ? " multiple='" . htmlspecialchars($multiple, ENT_QUOTES) . "'" : '').
@@ -4358,12 +4360,12 @@ function select(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</select>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</select>");
     
 }
 
 function slot(
-    string $body= "",
+    string|array|RenderResult $body,
     string $name= "",
     string $accesskey= "",
     string $autocapitalize= "",
@@ -4386,8 +4388,8 @@ function slot(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<slot" .     ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<slot" .     ($name !== '' ? " name='" . htmlspecialchars($name, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
@@ -4408,12 +4410,12 @@ function slot(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</slot>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</slot>");
     
 }
 
 function small(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4435,8 +4437,8 @@ function small(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<small" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<small" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4456,7 +4458,7 @@ function small(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</small>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</small>");
     
 }
 
@@ -4489,8 +4491,8 @@ function source(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<source" .     ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<source" .     ($type !== '' ? " type='" . htmlspecialchars($type, ENT_QUOTES) . "'" : '').
         ($media !== '' ? " media='" . htmlspecialchars($media, ENT_QUOTES) . "'" : '').
         ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
         ($srcset !== '' ? " srcset='" . htmlspecialchars($srcset, ENT_QUOTES) . "'" : '').
@@ -4517,12 +4519,12 @@ function source(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 
 function span(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4544,8 +4546,8 @@ function span(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<span" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<span" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4565,12 +4567,12 @@ function span(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</span>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</span>");
     
 }
 
 function strong(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4592,8 +4594,8 @@ function strong(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<strong" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<strong" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4613,12 +4615,12 @@ function strong(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</strong>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</strong>");
     
 }
 
 function style(
-    string $body= "",
+    string|array|RenderResult $body,
     string $media= "",
     string $blocking= "",
     string $accesskey= "",
@@ -4642,8 +4644,8 @@ function style(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<style" .     ($media !== '' ? " media='" . htmlspecialchars($media, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<style" .     ($media !== '' ? " media='" . htmlspecialchars($media, ENT_QUOTES) . "'" : '').
         ($blocking !== '' ? " blocking='" . htmlspecialchars($blocking, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
@@ -4665,12 +4667,12 @@ function style(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</style>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</style>");
     
 }
 
 function sub(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4692,8 +4694,8 @@ function sub(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<sub" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<sub" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4713,12 +4715,12 @@ function sub(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</sub>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</sub>");
     
 }
 
 function summary(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4740,8 +4742,8 @@ function summary(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<summary" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<summary" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4761,12 +4763,12 @@ function summary(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</summary>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</summary>");
     
 }
 
 function sup(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4788,8 +4790,8 @@ function sup(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<sup" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<sup" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4809,12 +4811,12 @@ function sup(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</sup>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</sup>");
     
 }
 
 function svg(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4836,8 +4838,8 @@ function svg(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<svg" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<svg" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4857,12 +4859,12 @@ function svg(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</svg>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</svg>");
     
 }
 
 function table(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4884,8 +4886,8 @@ function table(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<table" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<table" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4905,12 +4907,12 @@ function table(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</table>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</table>");
     
 }
 
 function tbody(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -4932,8 +4934,8 @@ function tbody(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<tbody" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<tbody" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -4953,12 +4955,12 @@ function tbody(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</tbody>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</tbody>");
     
 }
 
 function td(
-    string $body= "",
+    string|array|RenderResult $body,
     string $colspan= "",
     string $rowspan= "",
     string $headers= "",
@@ -4983,8 +4985,8 @@ function td(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<td" .     ($colspan !== '' ? " colspan='" . htmlspecialchars($colspan, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<td" .     ($colspan !== '' ? " colspan='" . htmlspecialchars($colspan, ENT_QUOTES) . "'" : '').
         ($rowspan !== '' ? " rowspan='" . htmlspecialchars($rowspan, ENT_QUOTES) . "'" : '').
         ($headers !== '' ? " headers='" . htmlspecialchars($headers, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
@@ -5007,11 +5009,12 @@ function td(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</td>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</td>");
     
 }
 
 function template(
+    string|array|RenderResult $body,
     string $shadowrootmode= "",
     string $shadowrootdelegatesfocus= "",
     string $shadowrootclonable= "",
@@ -5037,8 +5040,8 @@ function template(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<template" .     ($shadowrootmode !== '' ? " shadowrootmode='" . htmlspecialchars($shadowrootmode, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<template" .     ($shadowrootmode !== '' ? " shadowrootmode='" . htmlspecialchars($shadowrootmode, ENT_QUOTES) . "'" : '').
         ($shadowrootdelegatesfocus !== '' ? " shadowrootdelegatesfocus='" . htmlspecialchars($shadowrootdelegatesfocus, ENT_QUOTES) . "'" : '').
         ($shadowrootclonable !== '' ? " shadowrootclonable='" . htmlspecialchars($shadowrootclonable, ENT_QUOTES) . "'" : '').
         ($shadowrootserializable !== '' ? " shadowrootserializable='" . htmlspecialchars($shadowrootserializable, ENT_QUOTES) . "'" : '').
@@ -5062,12 +5065,12 @@ function template(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</template>");
     
 }
 
 function textarea(
-    string $body= "",
+    string|array|RenderResult $body,
     string $autocomplete= "",
     string $cols= "",
     string $dirname= "",
@@ -5102,8 +5105,8 @@ function textarea(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<textarea" .     ($autocomplete !== '' ? " autocomplete='" . htmlspecialchars($autocomplete, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<textarea" .     ($autocomplete !== '' ? " autocomplete='" . htmlspecialchars($autocomplete, ENT_QUOTES) . "'" : '').
         ($cols !== '' ? " cols='" . htmlspecialchars($cols, ENT_QUOTES) . "'" : '').
         ($dirname !== '' ? " dirname='" . htmlspecialchars($dirname, ENT_QUOTES) . "'" : '').
         ($disabled !== '' ? " disabled='" . htmlspecialchars($disabled, ENT_QUOTES) . "'" : '').
@@ -5136,12 +5139,12 @@ function textarea(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</textarea>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</textarea>");
     
 }
 
 function tfoot(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -5163,8 +5166,8 @@ function tfoot(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<tfoot" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<tfoot" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -5184,12 +5187,12 @@ function tfoot(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</tfoot>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</tfoot>");
     
 }
 
 function th(
-    string $body= "",
+    string|array|RenderResult $body,
     string $colspan= "",
     string $rowspan= "",
     string $headers= "",
@@ -5216,8 +5219,8 @@ function th(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<th" .     ($colspan !== '' ? " colspan='" . htmlspecialchars($colspan, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<th" .     ($colspan !== '' ? " colspan='" . htmlspecialchars($colspan, ENT_QUOTES) . "'" : '').
         ($rowspan !== '' ? " rowspan='" . htmlspecialchars($rowspan, ENT_QUOTES) . "'" : '').
         ($headers !== '' ? " headers='" . htmlspecialchars($headers, ENT_QUOTES) . "'" : '').
         ($scope !== '' ? " scope='" . htmlspecialchars($scope, ENT_QUOTES) . "'" : '').
@@ -5242,12 +5245,12 @@ function th(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</th>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</th>");
     
 }
 
 function thead(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -5269,8 +5272,8 @@ function thead(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<thead" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<thead" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -5290,12 +5293,12 @@ function thead(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</thead>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</thead>");
     
 }
 
 function time(
-    string $body= "",
+    string|array|RenderResult $body,
     string $datetime= "",
     string $accesskey= "",
     string $autocapitalize= "",
@@ -5318,8 +5321,8 @@ function time(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<time" .     ($datetime !== '' ? " datetime='" . htmlspecialchars($datetime, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<time" .     ($datetime !== '' ? " datetime='" . htmlspecialchars($datetime, ENT_QUOTES) . "'" : '').
         ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
@@ -5340,12 +5343,12 @@ function time(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</time>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</time>");
     
 }
 
 function title(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -5367,8 +5370,8 @@ function title(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<title" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<title" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -5388,12 +5391,12 @@ function title(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</title>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</title>");
     
 }
 
 function tr(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -5415,8 +5418,8 @@ function tr(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<tr" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<tr" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -5436,7 +5439,7 @@ function tr(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</tr>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</tr>");
     
 }
 
@@ -5467,8 +5470,8 @@ function track(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<track" .     ($default !== '' ? " default='" . htmlspecialchars($default, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<track" .     ($default !== '' ? " default='" . htmlspecialchars($default, ENT_QUOTES) . "'" : '').
         ($kind !== '' ? " kind='" . htmlspecialchars($kind, ENT_QUOTES) . "'" : '').
         ($label !== '' ? " label='" . htmlspecialchars($label, ENT_QUOTES) . "'" : '').
         ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
@@ -5493,12 +5496,12 @@ function track(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 
 function u(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -5520,8 +5523,8 @@ function u(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<u" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<u" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -5541,12 +5544,12 @@ function u(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</u>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</u>");
     
 }
 
 function ul(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -5568,8 +5571,8 @@ function ul(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<ul" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<ul" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -5589,12 +5592,12 @@ function ul(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</ul>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</ul>");
     
 }
 
 function variable(
-    string $body= "",
+    string|array|RenderResult $body,
     string $accesskey= "",
     string $autocapitalize= "",
     string $class= "",
@@ -5616,8 +5619,8 @@ function variable(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<var" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<var" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -5637,12 +5640,12 @@ function variable(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</var>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</var>");
     
 }
 
 function video(
-    string $body= "",
+    string|array|RenderResult $body,
     string $src= "",
     string $crossorigin= "",
     string $poster= "",
@@ -5675,8 +5678,8 @@ function video(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<video" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<video" .     ($src !== '' ? " src='" . htmlspecialchars($src, ENT_QUOTES) . "'" : '').
         ($crossorigin !== '' ? " crossorigin='" . htmlspecialchars($crossorigin, ENT_QUOTES) . "'" : '').
         ($poster !== '' ? " poster='" . htmlspecialchars($poster, ENT_QUOTES) . "'" : '').
         ($preload !== '' ? " preload='" . htmlspecialchars($preload, ENT_QUOTES) . "'" : '').
@@ -5707,7 +5710,7 @@ function video(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</video>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). ">{$body}</video>");
     
 }
 
@@ -5733,8 +5736,8 @@ function wbr(
     string $tabindex= "",
     string $title= "",
     string $translate= ""
-) {
-    return "<wbr" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
+): RenderResult {
+    return RenderResult::encoded("<wbr" .     ($accesskey !== '' ? " accesskey='" . htmlspecialchars($accesskey, ENT_QUOTES) . "'" : '').
         ($autocapitalize !== '' ? " autocapitalize='" . htmlspecialchars($autocapitalize, ENT_QUOTES) . "'" : '').
         ($class !== '' ? " class='" . htmlspecialchars($class, ENT_QUOTES) . "'" : '').
         ($contenteditable !== '' ? " contenteditable='" . htmlspecialchars($contenteditable, ENT_QUOTES) . "'" : '').
@@ -5754,7 +5757,7 @@ function wbr(
         ($style !== '' ? " style='" . htmlspecialchars($style, ENT_QUOTES) . "'" : '').
         ($tabindex !== '' ? " tabindex='" . htmlspecialchars($tabindex, ENT_QUOTES) . "'" : '').
         ($title !== '' ? " title='" . htmlspecialchars($title, ENT_QUOTES) . "'" : '').
-        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>";
+        ($translate !== '' ? " translate='" . htmlspecialchars($translate, ENT_QUOTES) . "'" : ''). "/>");
     
 }
 

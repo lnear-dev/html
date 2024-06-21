@@ -17,6 +17,9 @@
  * @link     https://lnear.dev
  * @contact  hi@lnear.dev
  */
-require_once __DIR__.'/bootstrap.php';
+namespace html;
 
-require_once __DIR__.'/elements.php';
+interface RenderResultInterface extends \IteratorAggregate, \Stringable
+{
+    public function getIterator(): \Traversable;
+}
