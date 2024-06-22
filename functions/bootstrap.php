@@ -83,3 +83,8 @@ function selfClosingElement(string $tag, string ...$attributes): RenderResult
 
     return RenderResult::encoded("<{$tag}{$attrs}/>");
 }
+
+function bypass(string $content): RenderResult
+{
+    return RenderResult::encoded($content);
+}

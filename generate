@@ -68,14 +68,20 @@ class Bin
             $selfClosing = strpos($children, 'empty') !== false && $tag !== 'template';
             $e           = [
                 "tag" => $tag,
-                // "attributes"  => $attributes,
-                // "selfClosing" => $selfClosing,
             ];
             if (!empty($attributes))
                 $e["attributes"] = $attributes;
             if ($selfClosing)
                 $e["selfClosing"] = true;
+
             $elements[] = $e;
+            if ($tag === 'h1') {
+                for ($i = 2; $i <= 6; $i++) {
+                    $elements[] = [
+                        "tag" => "h{$i}",
+                    ];
+                }
+            }
         }
         file_put_contents(kJSONOutFile, json_encode($elements, JSON_PRETTY_PRINT));
         self::generate($elements);

@@ -139,6 +139,11 @@ The following elements only have the global attributes:
 | `figure` |
 | `footer` |
 | `h1` |
+| `h2` |
+| `h3` |
+| `h4` |
+| `h5` |
+| `h6` |
 | `head` |
 | `header` |
 | `hgroup` |

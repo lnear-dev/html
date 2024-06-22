@@ -253,6 +253,36 @@ function h1(
     return element('h1', $body, ...$attributes);
 }
 
+function h2(
+    string|array|RenderResult $body, string ...$attributes
+): RenderResult {
+    return element('h2', $body, ...$attributes);
+}
+
+function h3(
+    string|array|RenderResult $body, string ...$attributes
+): RenderResult {
+    return element('h3', $body, ...$attributes);
+}
+
+function h4(
+    string|array|RenderResult $body, string ...$attributes
+): RenderResult {
+    return element('h4', $body, ...$attributes);
+}
+
+function h5(
+    string|array|RenderResult $body, string ...$attributes
+): RenderResult {
+    return element('h5', $body, ...$attributes);
+}
+
+function h6(
+    string|array|RenderResult $body, string ...$attributes
+): RenderResult {
+    return element('h6', $body, ...$attributes);
+}
+
 function head(
     string|array|RenderResult $body, string ...$attributes
 ): RenderResult {
