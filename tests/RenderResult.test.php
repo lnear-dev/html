@@ -18,6 +18,7 @@
  * @contact  hi@lnear.dev
  */
 use html\RenderResult;
+use function html\bypass;
 
 describe('RenderResult', function () {
 

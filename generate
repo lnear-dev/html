@@ -1,15 +1,5 @@
 #!/usr/bin/env php
 <?php
-require __DIR__ . '/vendor/autoload.php';
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\SingleCommandApplication;
-
-const kSpec          = 'https://html.spec.whatwg.org/multipage/indices.html';
-const kJSONOutFile   = __DIR__ . '/elements.json';
-const kPHPOutFile    = __DIR__ . '/functions/elements.php';
-const kStrictOutFile = __DIR__ . '/functions/strict.php';
 define('kReadmeStub', file_get_contents(__DIR__ . '/README.md.stub'));
 const kReadmeFile       = __DIR__ . '/README.md';
 const kGlobalAttributes = [
@@ -35,6 +25,24 @@ const kGlobalAttributes = [
     'title',
     'translate',
 ];
+const kSpec             = 'https://html.spec.whatwg.org/multipage/indices.html';
+const kJSONOutFile      = __DIR__ . '/elements.json';
+const kPHPOutFile       = __DIR__ . '/functions/elements.php';
+const kStrictOutFile    = __DIR__ . '/functions/strict.php';
+
+//create both php files if they don't exist since they are autoloaded
+foreach ([kPHPOutFile, kStrictOutFile] as $file) {
+    if (!file_exists($file)) {
+        file_put_contents($file, "<?php\n");
+    }
+}
+
+require __DIR__ . '/vendor/autoload.php';
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\SingleCommandApplication;
+
 class Bin
 {
     static function update()
@@ -102,10 +110,10 @@ class Bin
             $fname = 'variable';
         }
         $params = "string ...\$attributes";
-        $body   = "return selfClosingElement('{$tag}', ...\$attributes);";
+        $body   = "return Renderer::void('{$tag}', ...\$attributes);";
         if (!$selfClosing) {
             $params = "string|array|RenderResult \$body, {$params}";
-            $body   = "return element('{$tag}', \$body, ...\$attributes);";
+            $body   = "return Renderer::element('{$tag}', \$body, ...\$attributes);";
         }
         [$params, $body] = self::indent($level, $params, $body);
         return "function {$fname}(\n{$params}\n): RenderResult {\n{$body}\n}";
@@ -121,37 +129,38 @@ class Bin
         if ($tag === 'var') {
             $fname = 'variable';
         }
-        $args = array_map(
-            fn($attr) => "string " . self::camelArg($attr) . '= ""',
+        $args = $selfClosing ? [] : ['string|array|RenderResult $body'];
+        foreach ($attributes as $attr) {
+            $args[] = "string " . self::camelArg($attr) . '= ""';
+        }
+        $args[]              = 'array $dataset = []';
+        $attributesStrings   = array_map(
+            function ($attr) use ($level) {
+                $arg = self::camelArg($attr);
+                return self::indent(
+                    $level,
+                    "({$arg} !== '' ? \" {$attr}='\" . htmlspecialchars({$arg}, ENT_QUOTES) . \"'\" : '')",
+                );
+            },
             $attributes,
         );
-        if (!$selfClosing) {
-            array_unshift($args, 'string|array|RenderResult $body');
-        }
-
-        $attributes_impl = join(
-            ".\n",
-            array_map(
-                function ($attr) use ($level) {
-                    $arg = self::camelArg($attr);
-                    return self::indent(
-                        $level,
-                        "({$arg} !== '' ? \" {$attr}='\" . htmlspecialchars({$arg}, ENT_QUOTES) . \"'\" : '')",
-                    );
-                },
-                $attributes,
-            ),
+        $attributesStrings[] = self::indent(
+            $level,
+            "Renderer::dataset(...\$dataset)",
         );
-
-        $attributes_impl = $attributes_impl ? $attributes_impl . '.' : '';
-        $params          = self::indent(
+        $attributesStrings   = join(
+            ".\n",
+            $attributesStrings,
+        );
+        $attributesStrings   = $attributesStrings ? $attributesStrings . '.' : '';
+        $params              = self::indent(
             $level,
             join(",\n", $args),
         );
 
         $body = self::indent(
             $level,
-            "return RenderResult::encoded(\"<{$tag}\" . {$attributes_impl} " . ($selfClosing ? '"/>"' : "\">{\$body}</{$tag}>\"") . ");\n",
+            "return RenderResult::encoded(\"<{$tag}\" . {$attributesStrings} " . ($selfClosing ? '"/>"' : "\">{\$body}</{$tag}>\"") . ");\n",
         );
 
         return "function {$fname}(\n{$params}\n): RenderResult {\n{$body}\n}";
@@ -173,8 +182,12 @@ class Bin
         if ($file === false) {
             die("Failed to open PHP file for writing.");
         }
-
-        fwrite($file, "<?php\n\nnamespace html;\n\n");
+        fwrite($file, join("\n", [
+            "<?php",
+            "namespace html;",
+            "\n",
+            'function bypass(string|RenderResult ...$content): RenderResult { return RenderResult::encoded(...$content); }',
+        ]) . "\n\n");
         foreach ($elements as $element) {
             $tag         = $element['tag'];
             $attributes  = array_merge($element['attributes'] ?? [], kGlobalAttributes);
@@ -198,7 +211,12 @@ class Bin
         }
 
 
-        fwrite($file, "<?php\n\nnamespace html\\strict;\n\nuse html\\RenderResult;\n\n");
+        fwrite($file, join("\n", [
+            "<?php",
+            "namespace html\\strict;",
+            "use html\\{RenderResult, Renderer};",
+        ]) . "\n\n");
+
 
         foreach ($elements as $element) {
             $tag         = $element['tag'];

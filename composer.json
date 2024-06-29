@@ -8,7 +8,6 @@
       "html\\": "src/"
     },
     "files": [
-      "functions/bootstrap.php",
       "functions/elements.php",
       "functions/strict.php"
     ]

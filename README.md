@@ -1,57 +1,71 @@
-# lnear/html, a PHP library for generating HTML elements
+# lnear/html: A PHP Library for Generating HTML Elements
 
-This is a list of HTML elements and their attributes generated from the [HTML Living Standard](https://html.spec.whatwg.org/multipage/indices.html).
+This library provides a collection of functions for generating HTML elements and their attributes based on the [HTML Living Standard](https://html.spec.whatwg.org/multipage/indices.html).
 
-# Installation
+## Installation
+
+To install the library, use the following command:
 
 ```bash
 composer require lnear/html
 ```
 
-# Usage
+## Usage
 
-The functions are named after the HTML elements, and they take the attributes as named arguments. There are two flavours of functions each with their own namespaces: `html` and `html\\strict`.
+The library provides functions named after HTML elements, which accept attributes as named arguments. There are two namespaces available: `html` and `html\strict`.
 
-The `html\\strict` namespace only allows attributes that are valid for the element according to the HTML Living Standard.
+- **`html\strict` Namespace:** Only allows attributes that are valid for the element according to the HTML Living Standard.
+- **`html` Namespace:** More permissive, allowing any attribute to be passed to the function. Custom attribute names should be in camelCase.
 
-The `html` namespace is more permissive and allows any attribute to be passed to the function. The custom attribute names should be camelCase when called with the `html` namespace.
+### Examples
 
-For example:
 ```php
-html\\strict\\a(href: 'https://example.com', dataFoo: 'bar'); // Throws an InvalidArgumentException
+// Using the strict namespace
+html\strict\a(href: 'https://example.com', dataFoo: 'bar'); // Throws an InvalidArgumentException
 
-html\\a(href: 'https://example.com', dataFoo: 'bar'); // <a href="https://example.com" data-foo="bar"></a>
+// Using the permissive namespace
+html\a(href: 'https://example.com', dataFoo: 'bar'); // <a href="https://example.com" data-foo="bar"></a>
 ```
 
-Other than that, the two namespaces are identical. The following examples use the `html` namespace, but you can use the `html\\strict` namespace if you want to enforce the HTML standard.
+Other than the attribute restrictions, the two namespaces function identically. The following examples use the `html` namespace, but you can use the `html\strict` namespace to enforce the HTML standard.
+
+### `data-*` Attributes
+
+To pass `data-*` attributes with the `html\strict` namespace, use the `dataset` attribute as an associative array with keys as the attribute names without the `data-` prefix.
 
 ```php
-use html\\a;
+use function html\strict\a;
 
-echo a(href: 'https://example.com', target: '_blank', rel: 'noopener noreferrer'); // <a href="https://example.com" target="_blank" rel="noopener noreferrer"></a>
+echo a(href: 'https://example.com', dataset: ['fooBar' => 'baz']); // <a href="https://example.com" data-foo-bar="baz"></a>
+echo a(href: 'https://example.com', dataset: ['fooBar' => 'baz', 'barFoo' => 'qux']); // <a href="https://example.com" data-foo-bar="baz" data-bar-foo="qux"></a>
 ```
 
-All functions return a Stringable class (`html\\RenderResult`) of the HTML element that it is named after. The only exception is the `var` function, which is named `variable` to avoid conflicts with the reserved keyword `var`.
+All functions return a `Stringable` class (`html\RenderResult`) of the HTML element they represent. The only exception is the `var` function, which is named `variable` to avoid conflicts with the reserved keyword `var`.
 
-The `body` argument is present in all non-self-closing elements. It is used to add text or other elements inside the element.
+### Body Argument
+
+The `body` argument is present in all non-self-closing elements, used to add text or other elements inside the element.
 
 ```php
-use html\\div;
+use function html\div;
 
 echo div(body: 'Hello, World!'); // <div>Hello, World!</div>
 ```
 
-It is also the first argument in those functions, so you can omit the argument name.
+The `body` argument is also the first argument in these functions, so the argument name can be omitted.
 
 ```php
-use html\\div;
+use function html\div;
 
 echo div('Hello, World!'); // <div>Hello, World!</div>
 ```
 
-More complex elements can be created by nesting functions, and the `body` argument can be an array of elements.
+### Nested Elements
+
+More complex elements can be created by nesting functions, with the `body` argument as an array of elements.
+
 ```php
-use html\\{div, a, p};
+use function html\{div, a, p};
 
 echo div(
     class: 'container', 
@@ -64,12 +78,12 @@ echo div(
 // <div class="container"><a href="https://example.com" target="_blank" rel="noopener noreferrer">Click me!</a><p>This is a paragraph.</p></div>
 ```
 
-# Encoding
+## Encoding
 
-The `html\\RenderResult` class implements the `Stringable` interface, so you can use it in any context where a string is expected. You can also use it to bypass the HTML encoding of a string.
+The `html\RenderResult` class implements the `Stringable` interface, allowing its use in any context where a string is expected. It can also be used to bypass HTML encoding of a string.
 
 ```php
-use html\\{div, RenderResult};
+use function html\{div, RenderResult};
 
 $unsafe = '<script>alert("XSS")</script>';
 
@@ -82,6 +96,10 @@ echo div(body: $safe); // No double encoding: <div>&lt;script&gt;alert(&quot;XSS
 $byPass = RenderResult::encoded($unsafe); // String already encoded
 
 echo div(body: $byPass); // <div><script>alert("XSS")</script></div>
+
+// Or use the bypass helper function
+use function html\bypass;
+echo div(body: bypass($unsafe)); // <div><script>alert("XSS")</script></div>
 ```
 
 
