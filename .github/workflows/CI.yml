@@ -18,9 +18,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
       - name: Setup PHP Action
         uses: shivammathur/setup-php@2.30.0
         with:
