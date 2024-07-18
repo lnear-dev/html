@@ -64,7 +64,7 @@ class Renderer
      */
     public static function attributes(string|bool ...$attributes): string
     {
-        $attrs = '';
+        $attrs = [""];
         foreach ($attributes as $key => $value) {
             $key = htmlspecialchars(
                 preg_replace_callback(
@@ -77,18 +77,15 @@ class Renderer
                 $value = implode(' ', $value);
             }
 
-            if( $value === true )
-            {
-                $attrs .= " {$key}='{$value}'";
-            }
-            else if ( $value !== false )
-            {
-                $value = htmlspecialchars($value);
-                $attrs .= " {$key}='{$value}'";
+            if ($value === true) {
+                $attrs[] = $key;
+            } else if ($value !== false) {
+                $value   = htmlspecialchars($value);
+                $attrs[] = "{$key}='{$value}'";
             }
         }
 
-        return $attrs;
+        return implode(' ', $attrs);
     }
 
 
