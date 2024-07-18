@@ -35,7 +35,7 @@ class Renderer
      * </code>
      */
     public static function dataset(
-        string ...$attributes,
+        string|bool ...$attributes,
     ): string {
         $attrs = '';
         foreach ($attributes as $dataKey => $dataValue) {
@@ -62,7 +62,7 @@ class Renderer
      * // Output: class="btn" id="submit" type="submit"
      * </code>
      */
-    public static function attributes(string ...$attributes): string
+    public static function attributes(string|bool ...$attributes): string
     {
         $attrs = '';
         foreach ($attributes as $key => $value) {
@@ -76,8 +76,16 @@ class Renderer
             if (is_array($value)) {
                 $value = implode(' ', $value);
             }
-            $value = htmlspecialchars($value);
-            $attrs .= " {$key}='{$value}'";
+
+            if( $value === true )
+            {
+                $attrs .= " {$key}='{$value}'";
+            }
+            else if ( $value !== false )
+            {
+                $value = htmlspecialchars($value);
+                $attrs .= " {$key}='{$value}'";
+            }
         }
 
         return $attrs;
@@ -92,7 +100,7 @@ class Renderer
      * // Output: <img src="image.jpg" alt="Image" />
      * </code>
      */
-    public static function void(string $tag, string ...$attributes): RenderResult
+    public static function void(string $tag, string|bool ...$attributes): RenderResult
     {
         $attrs = static::attributes(...$attributes);
         return RenderResult::encoded("<{$tag}{$attrs}/>");
@@ -107,7 +115,7 @@ class Renderer
      * // Output: <button class="btn" id="submit" type="submit">Submit</button>
      * </code>
      */
-    public static function element(string $tag, string|RenderResult|array $body, string ...$attributes): RenderResult
+    public static function element(string $tag, string|RenderResult|array $body, string|bool ...$attributes): RenderResult
     {
         $attrs          = Renderer::attributes(...$attributes);
         $content        = is_array($body) ? $body : [$body];
