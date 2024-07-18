@@ -109,7 +109,7 @@ class Bin
         if ($tag === 'var') {
             $fname = 'variable';
         }
-        $params = "string ...\$attributes";
+        $params = "string|bool ...\$attributes";
         $body   = "return Renderer::void('{$tag}', ...\$attributes);";
         if (!$selfClosing) {
             $params = "string|array|RenderResult \$body, {$params}";
