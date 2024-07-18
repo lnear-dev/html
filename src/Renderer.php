@@ -76,8 +76,16 @@ class Renderer
             if (is_array($value)) {
                 $value = implode(' ', $value);
             }
-            $value = htmlspecialchars($value);
-            $attrs .= " {$key}='{$value}'";
+
+            if( $value === true )
+            {
+                $attrs .= " {$key}='{$value}'";
+            }
+            else if ( $value !== false )
+            {
+                $value = htmlspecialchars($value);
+                $attrs .= " {$key}='{$value}'";
+            }
         }
 
         return $attrs;
