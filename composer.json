@@ -9,7 +9,8 @@
     },
     "files": [
       "functions/elements.php",
-      "functions/strict.php"
+      "functions/strict.php",
+      "functions/util.php"
     ]
   },
   "authors": [

@@ -112,3 +112,104 @@ describe('html\\strict', function () {
         });
     }
 });
+
+
+describe('styleMap', function () {
+    it('should return a string of CSS styles', function () {
+        $styles = styleMap(fontFamily: 'Arial', fontSize: '12px', CustomColor: '#000000');
+        expect($styles)->toBe('font-family: Arial; font-size: 12px; --custom-color: #000000;');
+    });
+
+    it('should return a string of CSS styles', function () {
+        $styles = styleMap(font_family: 'Arial', font_size: '12px', CustomColor: '#000000');
+        expect($styles)->toBe('font-family: Arial; font-size: 12px; --custom-color: #000000;');
+    });
+
+    it('should return a string of CSS styles', function () {
+        $styles = styleMap(...['fontFamily' => 'Arial', 'fontSize' => '12px', 'CustomColor' => '#000000']);
+        expect($styles)->toBe('font-family: Arial; font-size: 12px; --custom-color: #000000;');
+    });
+
+    it('should return a string of CSS styles', function () {
+        $styles = styleMap(fontFamily: 'Arial', fontSize: '12px', CustomColor: '#000000', backgroundColor: 'red');
+        expect($styles)->toBe('font-family: Arial; font-size: 12px; --custom-color: #000000; background-color: red;');
+    });
+
+});
+
+describe('classMap', function () {
+    it('should return a string of CSS classes', function () {
+        $classes = classMap(class1: true, class2: false, class3: fn() => true);
+        expect($classes)->toBe('class1 class3');
+    });
+
+    it('should return a string of CSS classes', function () {
+        $classes = classMap(class1: true, class2: false, class3: true);
+        expect($classes)->toBe('class1 class3');
+    });
+
+    it('should return a string of CSS classes', function () {
+        $classes = classMap(class1: true, class2: false, class3: false);
+        expect($classes)->toBe('class1');
+    });
+
+    it('should return a string of CSS classes', function () {
+        $classes = classMap(...['syntax-not-allowed-as-a-named-parameter' => true, 'class2' => false, 'class3' => true]);
+        expect($classes)->toBe('syntax-not-allowed-as-a-named-parameter class3');
+    });
+
+});
+
+describe('when', function () {
+    it('should return the result of the true case', function () {
+        $result = when(true, fn() => 'True', fn() => 'False');
+        expect($result)->toBe('True');
+    });
+
+    it('should return the result of the false case', function () {
+        $result = when(false, fn() => 'True', fn() => 'False');
+        expect($result)->toBe('False');
+    });
+
+    it('should return null', function () {
+        $result = when(false, fn() => 'True');
+        expect($result)->toBeNull();
+    });
+
+});
+
+describe('choose', function () {
+    it('should return the result of the first case', function () {
+        $result = choose('case1', [['case1', fn() => 'Result1'], ['case2', fn() => 'Result2']]);
+        expect($result)->toBe('Result1');
+    });
+
+    it('should return the result of the second case', function () {
+        $result = choose('case2', [['case1', fn() => 'Result1'], ['case2', fn() => 'Result2']]);
+        expect($result)->toBe('Result2');
+    });
+
+    it('should return the result of the default case', function () {
+        $result = choose('case3', [['case1', fn() => 'Result1'], ['case2', fn() => 'Result2']], fn() => 'Default');
+        expect($result)->toBe('Default');
+    });
+
+});
+
+describe('join', function () {
+    it('should return an iterable with the joiner', function () {
+        $items = join(['item1', 'item2', 'item3'], ',');
+        expect(iterator_to_array($items))->toBe(['item1', ',', 'item2', ',', 'item3', ',']);
+    });
+
+    it('should return an iterable with the joiner', function () {
+        $items = join(['item1', 'item2', 'item3'], fn($index) => $index);
+        expect(iterator_to_array($items))->toBe(['item1', 0, 'item2', 1, 'item3', 2]);
+    });
+
+    it('should return an iterable with the joiner', function () {
+        $items = join(['item1', 'item2', 'item3'], fn($index) => $index + 1);
+        expect(iterator_to_array($items))->toBe(['item1', 1, 'item2', 2, 'item3', 3]);
+    });
+
+});
