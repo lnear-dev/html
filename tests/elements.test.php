@@ -24,7 +24,7 @@ describe('html', function () {
         $tag             = $data['tag'];
         $attributes      = $data['attributes'] ?? [];
         $selfClosing     = $data['selfClosing'] ?? false;
-        $attributeString = join(', ', $data['attributes'] ?? []);
+        $attributeString = \join(', ', $data['attributes'] ?? []);
         $attributeString = $attributeString ? " : [$attributeString]" : '';
         $fn              = ($tag === 'var') ? "\\html\\variable" : "\\html\\{$tag}";
         $attributesMap   = [];
@@ -63,7 +63,7 @@ describe('html\\strict', function () {
         $tag             = $data['tag'];
         $attributes      = $data['attributes'] ?? [];
         $selfClosing     = $data['selfClosing'] ?? false;
-        $attributeString = join(', ', $data['attributes'] ?? []);
+        $attributeString = \join(', ', $data['attributes'] ?? []);
         $attributeString = $attributeString ? " : [$attributeString]" : '';
         $fn              = ($tag === 'var') ? "\\html\\strict\\variable" : "\\html\\strict\\{$tag}";
         $attributesMap   = [];
